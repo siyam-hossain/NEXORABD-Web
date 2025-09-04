@@ -8,11 +8,503 @@
     <!-- tailwindcss -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-</head>
-<body>
-    <div class="">
+    <!-- remix icon -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
 
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+
+</head>
+<body class="container mx-auto bg-gray-200">
+
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
+
+        <aside class="col-span-1 row-span-12 h-full bg-white p-4">
+            <div class="h-full px-3 py-4 overflow-y-auto">
+
+                <ul class="space-y-2 font-medium my-24">
+                
+                <li>
+                    <a href="#" class="flex items-center p-2 text-gray-500 rounded-lg hover:bg-blue-500 hover:text-white group">
+
+                    <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C12.5523 3 13 3.44771 13 4L13 10C13 10.5523 12.5523 11 12 11L4 11C3.44772 11 3 10.5523 3 10L3 4C3 3.44772 3.44772 3 4 3L12 3ZM20 3C20.5523 3 21 3.44771 21 4L21 10C21 10.5523 20.5523 11 20 11L16 11C15.4477 11 15 10.5523 15 10L15 4C15 3.44771 15.4477 3 16 3L20 3ZM20 13C20.5523 13 21 13.4477 21 14L21 20C21 20.5523 20.5523 21 20 21L12 21C11.4477 21 11 20.5523 11 20L11 14C11 13.4477 11.4477 13 12 13L20 13ZM3 14C3 13.4477 3.44772 13 4 13L8 13C8.55229 13 9 13.4477 9 14L9 20C9 20.5523 8.55229 21 8 21L4 21C3.44772 21 3 20.5523 3 20L3 14Z"></path></svg>
+                    <span class="ms-3">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="flex items-center p-2 text-gray-500 rounded-lg hover:bg-blue-500 hover:text-white group">
+
+                    <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3ZM11 11H7V13H11V17H13V13H17V11H13V7H11V11Z"></path></svg>
+                    <span class="flex-1 ms-3 whitespace-nowrap">Add</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="flex items-center p-2 text-gray-500 rounded-lg hover:bg-blue-500 hover:text-white group">
+
+                    <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4C9.25144 4 6.82508 5.38626 5.38443 7.5H8V9.5H2V3.5H4V5.99936C5.82381 3.57166 8.72764 2 12 2C17.5228 2 22 6.47715 22 12H20C20 7.58172 16.4183 4 12 4ZM4 12C4 16.4183 7.58172 20 12 20C14.7486 20 17.1749 18.6137 18.6156 16.5H16V14.5H22V20.5H20V18.0006C18.1762 20.4283 15.2724 22 12 22C6.47715 22 2 17.5228 2 12H4Z"></path></svg>
+                    <span class="flex-1 ms-3 whitespace-nowrap">Update</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="flex items-center p-2 text-gray-500 rounded-lg hover:bg-blue-500 hover:text-white group">
+
+                    <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8ZM7 5V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V5H22V7H2V5H7ZM9 4V5H15V4H9ZM9 12V18H11V12H9ZM13 12V18H15V12H13Z"></path></svg>
+                    <span class="flex-1 ms-3 whitespace-nowrap">Delete</span>
+                    </a>
+                </li>
+
+                <li class="mt-10">
+                    <a href="#" class="flex items-center p-2 text-gray-500 rounded-lg hover:bg-blue-500 hover:text-white group">
+
+                    <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5 2H19C19.5523 2 20 2.44772 20 3V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V3C4 2.44772 4.44772 2 5 2ZM9 11V8L4 12L9 16V13H15V11H9Z"></path></svg>
+                    <span class="flex-1 ms-3 whitespace-nowrap">Sign out</span>
+                    </a>
+                </li>
+
+
+                </ul>
+            </div>
+        </aside>
+
+
+        
+        <div class="col-span-5">
+            <header class="flex justify-between items-center mb-8  p-8 border border-gray-200 rounded-b-lg bg-white">
+                <div class="w-6/12">
+                    <div>
+                        <form class="w-full">   
+                            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
+                            <div class="relative">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                                </svg>
+                            </div>
+                            <input 
+                                type="search" 
+                                id="default-search" 
+                                class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white" 
+                                placeholder="Search here" 
+                                required 
+                            />
+                            <button 
+                                type="submit" 
+                                class="text-black-500 absolute end-2.5 bottom-2.5 bg-white  hover:bg-blue-700 hover:text-white focus:ring-4 
+                                    focus:outline-none focus:ring-blue-300 border border-gray-200 font-medium rounded-md text-sm px-4 py-2">
+                                Search
+                            </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="flex items-center gap-4">
+                    <!-- Notification button -->
+                    <button class="p-2 rounded-full relative hover:bg-blue-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-7">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                        </svg>
+                    </button>
+        
+                    <img src="sh-img/sh-profile.jpg" alt="Profile.jpg" class="w-10 h-10 rounded-full">
+                    
+                    <button data-popover-target="popover-default" type="button" class="font-semibold">Cartesian</button>
+        
+                    <div data-popover id="popover-default" 
+                        role="tooltip" 
+                        class="absolute z-10 invisible inline-block w-64 text-sm text-black transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0">
+                        
+                        <div class="px-3 py-2">
+                            <h3 class="font-semibold text-black">Cartesian</h3>
+                            <h2 class="text-gray-400">cartesian@gmail.com</h2>
+                        </div>
+                        <div class="px-3 py-2">
+                            <button>
+                                <div class="flex items-center gap-3 px-4 pb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                    </svg>
+                                    <p class="font-semibold text-zinc-500">Edit Profile</p>
+                                
+                                </div>
+                            </button>
+                            <button>
+                                <div class="flex items-center gap-3 px-4 pb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                    </svg>
+            
+                                    <p class="font-semibold text-zinc-500">Accounts Settings</p>
+                                </div>
+                            </button>
+                            <button>
+                                
+                                <div class="flex items-center gap-3 px-4 pb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+                                    </svg>
+            
+                                    <p class="font-semibold text-zinc-500">Support</p>
+                                </div>
+        
+                            </button>
+        
+                            <hr>
+                            <button>
+                                <div class="flex items-center gap-3 px-4 pb-2 pt-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                                    </svg>
+                                    <p class="font-semibold text-zinc-500">Sign out</p>
+                                </div>
+        
+                            </button>
+                        </div>
+                        <div data-popper-arrow></div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- main container -->
+            <main class="h-screen w-full">
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+                    <!-- card 1 -->
+                    <div class="lg:col-span-1 h-[200px] border rounded-xl border-gray-300 p-5 bg-white drop-shadow-md flex flex-col">
+                        <div class="w-10 h-10 bg-gray-100 backdrop-blur-sm rounded-lg flex items-center justify-center border border-gray-300 drop-shadow-xl">
+
+                            <svg class="w-7 h-7 text-gray-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0049 22.0027C6.48204 22.0027 2.00488 17.5256 2.00488 12.0027C2.00488 6.4799 6.48204 2.00275 12.0049 2.00275C17.5277 2.00275 22.0049 6.4799 22.0049 12.0027C22.0049 17.5256 17.5277 22.0027 12.0049 22.0027ZM12.0049 20.0027C16.4232 20.0027 20.0049 16.421 20.0049 12.0027C20.0049 7.58447 16.4232 4.00275 12.0049 4.00275C7.5866 4.00275 4.00488 7.58447 4.00488 12.0027C4.00488 16.421 7.5866 20.0027 12.0049 20.0027ZM8.50488 14.0027H14.0049C14.281 14.0027 14.5049 13.7789 14.5049 13.5027C14.5049 13.2266 14.281 13.0027 14.0049 13.0027H10.0049C8.62417 13.0027 7.50488 11.8835 7.50488 10.5027C7.50488 9.12203 8.62417 8.00275 10.0049 8.00275H11.0049V6.00275H13.0049V8.00275H15.5049V10.0027H10.0049C9.72874 10.0027 9.50488 10.2266 9.50488 10.5027C9.50488 10.7789 9.72874 11.0027 10.0049 11.0027H14.0049C15.3856 11.0027 16.5049 12.122 16.5049 13.5027C16.5049 14.8835 15.3856 16.0027 14.0049 16.0027H13.0049V18.0027H11.0049V16.0027H8.50488V14.0027Z"></path></svg>
+                        </div>
+
+                        <div>
+                            <div class="mt-6 text-gray-500 font-semibold">
+                                Total Earning
+                            </div>
+                            <div class="mt-5 flex justify-between items-center text-gray-700">
+                                <div class="flex gap-2 font-bold text-3xl">
+                                    <div>$</div>
+                                    <h2>20000.00</h2>
+                                </div>
+                                <div class="w-20 h-5 font-semibold text-green-500 text-md flex gap-2 items-center justify-center p-2 bg-green-100 border border-green-100 rounded-xl">
+                                    <div>
+                                        <i class="ri-arrow-up-line"></i>
+                                    </div>
+                                    <div>10.25%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 2 -->
+                    <div class="lg:col-span-1 h-[200px] border rounded-xl border-gray-300 p-5 bg-white drop-shadow-md flex flex-col">
+                        <div class="w-10 h-10 bg-gray-100 backdrop-blur-sm rounded-lg flex items-center justify-center border border-gray-300 drop-shadow-xl">
+
+                            <svg class="w-7 h-7 text-gray-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM6.00436 7.00265V13.0027H17.5163L19.3163 7.00265H6.00436ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"></path></svg>
+                        </div>
+                        <div>
+                            <div class="mt-6 text-gray-500 font-semibold">
+                                Number of Orders
+                            </div>
+                            <div class="mt-5 flex justify-between items-center text-gray-700">
+                                <div class="flex gap-2 font-bold text-3xl">
+                                    <!-- <div>$</div> -->
+                                    <h2>3000</h2>
+                                </div>
+                                <div class="w-20 h-5 font-semibold text-red-500 text-md flex gap-2 items-center justify-center p-2 bg-red-100 border border-red-100 rounded-xl">
+                                    <div>
+                                        <i class="ri-arrow-down-line"></i>
+                                    </div>
+                                    <div>1.92%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 3 -->
+                    <div class="lg:col-span-2 h-[200px] border rounded-xl border-gray-300 p-5 bg-white drop-shadow-md flex flex-row gap-5 justify-evenly">
+                        <!-- 3.1 -->
+                        <div>
+
+                            <div class="w-10 h-10 bg-gray-100 backdrop-blur-sm rounded-lg flex items-center justify-center border border-gray-300 drop-shadow-xl">
+    
+                                <svg class="w-7 h-7 text-red-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"></path></svg>
+                            </div>
+                            <div>
+                                <div class="mt-6 text-gray-500 font-semibold">
+                                    Order Canceled
+                                </div>
+                                <div class="mt-5 flex justify-between items-center text-gray-700 gap-4">
+                                    <div class="flex gap-4 font-bold text-3xl">
+                                        <!-- <div>$</div> -->
+                                        <h2>80</h2>
+                                    </div>
+                                    <div class="w-20 h-5 font-semibold text-green-500 text-md flex gap-2 items-center justify-center p-2 bg-green-100 border border-green-100 rounded-xl">
+                                        <div>
+                                            <i class="ri-arrow-up-line"></i>
+                                        </div>
+                                        <div>1.75%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- vertical line -->
+                        <div class="border border-r-4 border-dashed border-gray-300"></div>
+
+                        <!-- 3.2 -->
+                        <div>
+                            <div class="w-10 h-10 bg-purple-100 backdrop-blur-sm rounded-lg flex items-center justify-center border border-gray-300 drop-shadow-xl">
+    
+                                <svg class="w-7 h-7 text-gray-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3V19H21V21H3V3H5ZM20.2929 6.29289L21.7071 7.70711L16 13.4142L13 10.415L8.70711 14.7071L7.29289 13.2929L13 7.58579L16 10.585L20.2929 6.29289Z"></path></svg>
+                            </div>
+                            <div>
+                                <div class="mt-6 text-gray-500 font-semibold">
+                                    Estimate Loss
+                                </div>
+                                <div class="mt-5 flex justify-between items-center text-gray-700 gap-4">
+                                    <div class="flex gap-2 font-bold text-3xl">
+                                        <div>$</div>
+                                        <h2>1095.65</h2>
+                                    </div>
+                                    <div class="w-20 h-5 font-semibold text-red-500 text-md flex gap-2 items-center justify-center p-2 bg-red-100 border border-red-100 rounded-xl">
+                                        <!-- <div>
+                                            <i class="ri-arrow-up-line"></i>
+                                        </div> -->
+                                        <div>3.96%</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- card 4 -->
+                    <div class="lg:col-span-3 h-full border rounded-xl border-gray-300 p-5 bg-white drop-shadow-md">
+                        
+                        <div class="max-w-8xl w-full bg-white rounded-lg shadow-sm p-4 md:p-6">
+                            <div class="flex justify-between">
+                                <div>
+                                    <h5 class="leading-none text-3xl font-bold text-gray-900 pb-2">20.00k</h5>
+                                    <p class="text-base font-normal text-gray-500">Revenue Over 60 days</p>
+                                </div>
+                                <div class="flex items-center px-2.5 py-0.5 text-base font-semibold text-green-500 text-center">
+                                    10.25%
+                                    <svg class="w-3 h-3 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div id="area-chart"></div>
+                            <div class="grid grid-cols-1 items-center border-gray-200 border-t justify-between">
+                                <div class="flex justify-between items-center pt-5">
+                                    <button
+                                        id="dropdownDefaultButton"
+                                        data-dropdown-toggle="lastDaysdropdown"
+                                        data-dropdown-placement="bottom"
+                                        class="text-sm font-medium text-gray-500 hover:text-gray-900 text-center inline-flex items-center"
+                                        type="button">
+                                        Last 60 days
+                                        <svg class="w-2.5 m-2.5 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                        </svg>
+                                    </button>
+                                    <div id="lastDaysdropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44">
+                                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
+                                            <li>
+                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Yesterday</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Today</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Last 7 days</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Last 30 days</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Last 60 days</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Last 90 days</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a
+                                        href="#"
+                                        class="uppercase text-sm font-semibold inline-flex items-center rounded-lg text-blue-600 hover:text-blue-700 hover:bg-gray-100 px-3 py-2">
+                                        Users Report
+                                        <svg class="w-2.5 h-2.5 ms-1.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                    <!-- card 5 -->
+                    <div class="lg:col-span-1 h-full border rounded-xl border-gray-300 p-5 bg-white drop-shadow-md flex flex-col">
+                        <div class="max-w-sm w-full bg-white rounded-lg shadow-sm p-4 md:p-6">
+
+                        <div class="flex justify-between items-start w-full">
+                            <div class="flex-col items-center">
+                                <div class="flex items-center mb-1">
+                                    <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white me-1">Products</h5>
+                                    <div data-popover id="chart-info" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400">
+                                        <div class="p-3 space-y-2">
+                                            <h3 class="font-semibold text-gray-900 dark:text-white">Activity growth - Incremental</h3>
+                                            <p>Report helps navigate cumulative growth of community activities. Ideally, the chart should have a growing trend, as stagnating chart signifies a significant decrease of community activity.</p>
+                                            <h3 class="font-semibold text-gray-900 dark:text-white">Calculation</h3>
+                                            <!-- <p>For each date bucket, the all-time volume of activities is calculated. This means that activities in period n contain all activities up to period n, plus the activities generated by your community in period.</p> -->
+                                            <a href="#" class="flex items-center font-medium text-blue-600 dark:text-blue-500 dark:hover:text-blue-600 hover:text-blue-700 hover:underline">Read more <svg class="w-2 h-2 ms-1.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                                    </svg></a>
+                                    </div>
+                                    <div data-popper-arrow></div>
+                                </div>
+                            </div>
+                            <button id="dateRangeButton" data-dropdown-toggle="dateRangeDropdown" data-dropdown-ignore-click-outside-class="datepicker" type="button" class="inline-flex items-center text-blue-700 dark:text-blue-600 font-medium hover:underline">31 Nov - 31 Dev <svg class="w-3 h-3 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                </svg>
+                            </button>
+                            <div id="dateRangeDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-80 lg:w-96 dark:bg-gray-700 dark:divide-gray-600">
+                                <div class="p-3" aria-labelledby="dateRangeButton">
+                                    <div date-rangepicker datepicker-autohide class="flex items-center">
+                                        <div class="relative">
+                                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                                            </svg>
+                                        </div>
+                                        <input name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Start date">
+                                        </div>
+                                        <span class="mx-2 text-gray-500 dark:text-gray-400">to</span>
+                                        <div class="relative">
+                                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                                            </svg>
+                                        </div>
+                                        <input name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="End date">
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="flex justify-end items-center">
+                            <button id="widgetDropdownButton" data-dropdown-toggle="widgetDropdown" data-dropdown-placement="bottom" type="button"  class="inline-flex items-center justify-center text-gray-500 w-8 h-8 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm"><svg class="w-3.5 h-3.5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                                </svg><span class="sr-only">Open dropdown</span>
+                            </button>
+                            <div id="widgetDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
+                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="widgetDropdownButton">
+                                    <li>
+                                    <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><svg class="w-3 h-3 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.418 17.861 1 20l2.139-6.418m4.279 4.279 10.7-10.7a3.027 3.027 0 0 0-2.14-5.165c-.802 0-1.571.319-2.139.886l-10.7 10.7m4.279 4.279-4.279-4.279m2.139 2.14 7.844-7.844m-1.426-2.853 4.279 4.279"/>
+                                        </svg>Edit widget
+                                    </a>
+                                    </li>
+                                    <li>
+                                    <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><svg class="w-3 h-3 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"/>
+                                        <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
+                                        </svg>Download data
+                                    </a>
+                                    </li>
+                                    <li>
+                                    <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><svg class="w-3 h-3 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5.953 7.467 6.094-2.612m.096 8.114L5.857 9.676m.305-1.192a2.581 2.581 0 1 1-5.162 0 2.581 2.581 0 0 1 5.162 0ZM17 3.84a2.581 2.581 0 1 1-5.162 0 2.581 2.581 0 0 1 5.162 0Zm0 10.322a2.581 2.581 0 1 1-5.162 0 2.581 2.581 0 0 1 5.162 0Z"/>
+                                        </svg>Add to repository
+                                    </a>
+                                    </li>
+                                    <li>
+                                    <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><svg class="w-3 h-3 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                                        <path d="M17 4h-4V2a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v2H1a1 1 0 0 0 0 2h1v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1a1 1 0 1 0 0-2ZM7 2h4v2H7V2Zm1 14a1 1 0 1 1-2 0V8a1 1 0 0 1 2 0v8Zm4 0a1 1 0 0 1-2 0V8a1 1 0 0 1 2 0v8Z"/>
+                                        </svg>Delete widget
+                                    </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- Line Chart -->
+                        <div class="py-6" id="pie-chart"></div>
+
+                        <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between">
+                            <div class="flex justify-between items-center pt-5">
+                            <!-- Button -->
+                            <button
+                                id="dropdownDefaultButton"
+                                data-dropdown-toggle="lastDaysdropdown"
+                                data-dropdown-placement="bottom"
+                                class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 text-center inline-flex items-center dark:hover:text-white"
+                                type="button">
+                                Last 7 days
+                                <svg class="w-2.5 m-2.5 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                </svg>
+                            </button>
+                            <div id="lastDaysdropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
+                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                                    <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Yesterday</a>
+                                    </li>
+                                    <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Today</a>
+                                    </li>
+                                    <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 7 days</a>
+                                    </li>
+                                    <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 30 days</a>
+                                    </li>
+                                    <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Last 90 days</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a
+                                href="#"
+                                class="uppercase text-sm font-semibold inline-flex items-center rounded-lg text-blue-600 hover:text-blue-700 dark:hover:text-blue-500  hover:bg-gray-100 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 px-3 py-2">
+                                Traffic analysis
+                                <svg class="w-2.5 h-2.5 ms-1.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                                </svg>
+                            </a>
+                            </div>
+                        </div>
+                        </div>
+
+                    </div>
+                
+            </main>
+            
+        </div>
     </div>
     
+
+
+<script src="/sh-js/sh-linechart.js"></script>
+<script src="/sh-js/sh-pie.js"></script>
+
 </body>
 </html>
