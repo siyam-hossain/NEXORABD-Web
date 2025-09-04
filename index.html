@@ -23,21 +23,154 @@
     <!--================CSS LINK==========================-->
 </head>
 <body class="font-inter">
-  <!--=================Header Part Start==============--> 
-  <header id="header-full">
-   <nav id="header-content">
-    <h1 class="font-bold text-5xl">Rasel Mahmud</h1>
-    <p>ssadsddf<i class="ri-truck-fill"></i></p>
-    <h1><i class="ri-money-dollar-circle-line"></i></h1>
-   </nav>
-  </header> 
+<!--=================Header Part Start==============--> 
+<header id="header-full" class="px-3 w-full fixed sm:px-0 bg-[#011F7F] border-b border-gray-500/50">
+  <div class="header-main border-b border-gray-500/50">
+    <div id="header-content" class="container mx-auto">
+     <div class="header-top-content flex items-center justify-between py-2">
+  <div class="logo">
+    <a href="#">
+      <img src="images/logo.png" alt="logo" class="h-12 sm:h-15">
+    </a>
+  </div>
+  <div class="hidden sm:block search-bar">
+    <div class="relative w-[430px]">
+      <input type="text" placeholder="Search NEXORABD"
+        class="w-full bg-white rounded-full px-5 py-2 pr-12 text-gray-700 border focus:outline-none" />
+      <button
+        class="absolute right-1.5 top-1/2 -translate-y-1/2 bg-[#011F7F] text-white rounded-full w-10 h-8 flex items-center justify-center">
+        <i class="ri-search-line text-white text-sm"></i>
+      </button>
+    </div>
+  </div>
+  <div class="hidden sm:flex header-r-items items-center gap-6">
+    <div class="item flex items-center border-r border-gray-500/50 pr-4">
+      <i class="ri-microsoft-fill text-white text-3xl"></i>
+      <div class="ml-2">
+        <p class="text-white text-sm">Download the</p>
+        <a href="#" class="text-white text-sm">NexoraBD App</a>
+      </div>
+    </div>
+    <div class="item flex items-center border-r border-gray-500/50 pr-4">
+      <i class="ri-user-fill text-white text-3xl"></i>
+      <div class="ml-2">
+        <p class="text-white text-sm">Welcome to</p>
+        <a href="#" class="text-white text-sm">Sign in/Register</a>
+      </div>
+    </div>
+    <div class="item flex items-center">
+      <i class="ri-shopping-cart-line text-white text-3xl"></i>
+      <div class="pl-2 flex flex-col items-center">
+        <span class="bg-[#D4024E] text-white text-sm font-bold px-3 rounded-full">0</span>
+        <p class="text-white text-sm">Cart</p>
+      </div>
+    </div>
+  </div>
+    <button class="sm:hidden text-white text-3xl" id="mobileMenuBtn">
+      <i class="ri-menu-line"></i>
+    </button>
+   </div>
+    </div>
+  </div>
+<div class="menu-full bg-[#011F7F] text-white hidden sm:block">
+  <div class="container mx-auto flex items-center justify-between py-2">
+    <div class="relative select-option hidden sm:block">
+      <select class="select w-[300px] rounded-full pl-10 pr-4 py-2 text-black focus:outline-none">
+        <option disabled selected>All Categories</option>
+        <option>Electronics</option>
+        <option>Clothings</option>
+        <option>Accessories</option>
+        <option>Home & Kitchen</option>
+        <option>Smartphone</option>
+        <option>Motorbike</option>
+      </select>
+      <i class="ri-menu-line absolute left-3 top-1/2 -translate-y-1/2 text-xl text-black"></i>
+    </div>
+    <ul class="hidden sm:flex items-center space-x-8">
+      <li><a href="#" class="hover:text-yellow-400 font-bold">Bestsellers</a></li>
+      <li><a href="#" class="hover:text-yellow-400 font-bold">Top Brands</a></li>
+      <li><a href="#" class="hover:text-yellow-400 font-bold">Home & Garden</a></li>
+      <li><a href="#" class="hover:text-yellow-400 font-bold">Hair Extensions & Wigs</a></li>
+      <li>
+        <div class="dropdown dropdown-hover">
+          <a href="#" class="flex items-center hover:text-yellow-400 font-bold">
+            More <i class="ri-arrow-down-s-line ml-1"></i>
+          </a>
+          <ul tabindex="0" class="dropdown-content menu bg-white text-black rounded-box z-10 w-52 p-2 shadow-sm">
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Today’s Deals</a></li>
+            <li><a href="#">Trending Now</a></li>
+            <li><a href="#">Flash Sale</a></li>
+            <li><a href="#">Top Rated</a></li>
+            <li><a href="#">Clearance</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <div class="hidden sm:flex items-center font-semibold">
+      <i class="ri-phone-fill mr-2 text-yellow-400"></i> Hot Line : +88002255444
+    </div>
+  </div>
+</div>
+<div id="mobileSidebar" class="fixed top-0 left-0 h-full w-64 bg-[#011F7F] text-white transform -translate-x-full transition-transform duration-300 z-50">
+  <div class="p-4 flex justify-between items-center border-b border-gray-500/50">
+    <h2 class="text-lg font-bold">Menu</h2>
+    <button id="closeSidebar" class="text-2xl">
+      <i class="ri-close-line"></i>
+    </button>
+  </div>
+  <ul class="flex flex-col p-4 space-y-4">
+    <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">Bestsellers</a></li>
+    <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">Top Brands</a></li>
+    <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">Home & Garden</a></li>
+    <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">Hair Extensions & Wigs</a></li>
+    <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">New Arrivals</a></li>
+    <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">Today’s Deals</a></li>
+    <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">Hot Line: +88002255444</a></li>
+  </ul>
+</div>
+<div id="overlay" class="fixed inset-0 bg-black/50 hidden z-40"></div>
+</header>
   <!--=================Header Section End===============-->
   <!--==================Main Part Start=================-->
   <main>
     <!--===============Banner Section Start=============-->
-   <section id="banner-full">
-   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae vitae sunt dignissimos suscipit quae consectetur ab aut at. Porro atque aliquid quis laborum cum voluptatem quas accusantium at inventore quaerat.</p>
+    <!--================Better Choice Start=============-->
+   <section id="better-choice" class="pt-33">
+    <div class="container mx-auto">
+      <div class="choice-item  flex flex-col gap-4 sm:gap-0 lg:flex-row  items-center justify-around py-2">
+        <div class="citem">
+          <h1 class="text-4xl font-bold text-black">Better Choice <br> better prices</h1>
+        </div>
+        <div class="citem text-center px-2">
+          <i class="ri-money-dollar-circle-line  font-bold text-black text-4xl"></i>
+          <h3 class=" text-xl font-bold text-black">Value for money</h3>
+          <p class=" text-[14px]  text-gray-600">Vorem ipsum dolor sit amet</p>
+        </div>
+        <div class="citem text-center px-2">
+          <i class="ri-wechat-line  font-bold text-black text-4xl"></i>
+          <h3 class=" text-xl font-bold text-black">24/7 hr Support</h3>
+          <p class=" text-[14px]  text-gray-600">Sorem ipsum dolor sit amet</p>
+        </div>
+        <div class="citem text-center px-2">
+          <i class="ri-truck-fill  font-bold text-black text-4xl"></i>
+          <h3 class=" text-xl font-bold text-black">Fast Delivery</h3>
+          <p class=" text-[14px]  text-gray-600">Forem ipsum dolor sit amet</p>
+        </div>
+        <div class="citem text-center px-2">
+          <i class="ri-bank-card-fill  font-bold text-black text-4xl"></i>
+          <h3 class=" text-xl font-bold text-black">Fast Delivery</h3>
+         <p class=" text-[14px]  text-gray-600">Forem ipsum dolor sit amet</p>
+        </div>
+        <div class="citem text-center px-">
+         <i class="ri-gift-fill font-bold text-black text-4xl"></i>
+         <h3 class=" text-xl font-bold text-black">Gift Services</h3>
+        <p class=" text-[14px]  text-gray-600">Gorem ipsum dolor sit amet</p>
+        </div>
+       </div>
+    </div>
    </section>
+   <!--================Better Choice End================-->
    <!--================Banner Section End===============-->
   </main>
   <!--=================Main Part End====================-->
