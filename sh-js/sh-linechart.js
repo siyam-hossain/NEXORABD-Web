@@ -1,3 +1,5 @@
+// sh-linechart.js (original, already has DOMContentLoaded)
+
 document.addEventListener("DOMContentLoaded", function () 
     {
             // Generate 60-day date range (from Jul 7, 2025 to Sep 4, 2025)
@@ -109,4 +111,3 @@ document.addEventListener("DOMContentLoaded", function ()
             }
     }
 );
-
