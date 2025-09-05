@@ -111,3 +111,99 @@ const autoSlide = setInterval(() => {
     clearInterval(autoSlide);
   }
 }, 2000);
+
+//==========================================
+const slider = document.getElementById('slider');
+const next = document.getElementById('next');
+const prev = document.getElementById('prev');
+const scrollAmount = 240; // Width + gap of each card
+
+// Arrow navigation
+next.addEventListener('click', () => {
+  slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+});
+
+prev.addEventListener('click', () => {
+  slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+});
+
+// Automatic sliding every 2 seconds
+setInterval(() => {
+  // Check if we are at the end
+  if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+    slider.scrollTo({ left: 0, behavior: 'smooth' }); // Reset to start
+  } else {
+    slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  }
+}, 2000);
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const slider = document.getElementById('slider');
+//   const leftArrow = document.getElementById('leftArrow');
+//   const rightArrow = document.getElementById('rightArrow');
+
+//   const card = slider.querySelector('.group') || slider.querySelector('.flex-shrink-0');
+//   const cardWidth = card.getBoundingClientRect().width;
+//   const gap = 24; // Tailwind gap-6
+//   const slideAmount = cardWidth + gap;
+
+//   // Arrow click functionality
+//   leftArrow.addEventListener('click', () => slider.scrollBy({ left: -slideAmount, behavior: 'smooth' }));
+//   rightArrow.addEventListener('click', () => slider.scrollBy({ left: slideAmount, behavior: 'smooth' }));
+
+//   // Auto-slide every 2 seconds
+//   setInterval(() => {
+//     if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+//       slider.scrollTo({ left: 0, behavior: 'smooth' });
+//     } else {
+//       slider.scrollBy({ left: slideAmount, behavior: 'smooth' });
+//     }
+//   }, 2000);
+// });
+// document.addEventListener('DOMContentLoaded', () => {
+//   const slider = document.getElementById('slider');
+//   const leftArrow = document.getElementById('leftArrow');
+//   const rightArrow = document.getElementById('rightArrow');
+
+//   const card = slider.querySelector('.group');
+//   const cardWidth = card.getBoundingClientRect().width;
+//   const gap = 24; // Tailwind gap-6
+//   const slideAmount = cardWidth + gap;
+
+//   // Arrow click functionality
+//   leftArrow.addEventListener('click', () => slider.scrollBy({ left: -slideAmount, behavior: 'smooth' }));
+//   rightArrow.addEventListener('click', () => slider.scrollBy({ left: slideAmount, behavior: 'smooth' }));
+
+//   // Continuous auto slide
+//   let scrollPos = 0;
+//   const speed = 1;
+
+//   function autoScroll() {
+//     scrollPos += speed;
+//     if (scrollPos >= slider.scrollWidth - slider.clientWidth) scrollPos = 0;
+//     slider.scrollLeft = scrollPos;
+//     requestAnimationFrame(autoScroll);
+//   }
+//   autoScroll();
+// });
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const slider = document.getElementById('slider');
+//   const leftArrow = document.getElementById('leftArrow');
+//   const rightArrow = document.getElementById('rightArrow');
+
+//   // Get card width dynamically (assumes all cards same width)
+//   const card = slider.querySelector('.group');
+//   const cardWidth = card.getBoundingClientRect().width;
+//   const gap = 24; // Tailwind gap-6 = 1.5rem = 24px
+//   const slideAmount = cardWidth + gap;
+
+//   leftArrow.addEventListener('click', () => {
+//     slider.scrollBy({ left: -slideAmount, behavior: 'smooth' });
+//   });
+
+//   rightArrow.addEventListener('click', () => {
+//     slider.scrollBy({ left: slideAmount, behavior: 'smooth' });
+//   });
+// });
+
