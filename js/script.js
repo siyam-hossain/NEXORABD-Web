@@ -94,24 +94,20 @@ const nextBtn = document.getElementById('next-slide');
 let currentIndex = 0;
 
 function updateSlide() {
-  const offset = -currentIndex * 100; // translateX in %
+  const offset = -currentIndex * 100; 
   slidesContainer.style.transform = `translateX(${offset}%)`;
 }
-
-// Next Slide only
 nextBtn.addEventListener('click', () => {
   if (currentIndex < slides.length - 1) {
     currentIndex++;
     updateSlide();
   }
 });
-
-// Auto-slide every 2 seconds, stop at last slide
 const autoSlide = setInterval(() => {
   if (currentIndex < slides.length - 1) {
     currentIndex++;
     updateSlide();
   } else {
-    clearInterval(autoSlide); // stop at last slide
+    clearInterval(autoSlide);
   }
 }, 2000);

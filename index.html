@@ -172,10 +172,10 @@
    </section>
    <!--================Better Choice End================-->
    <!--================Banner Part Start================-->
-   <section id="banner-full">
+<section id="banner-full">
   <div class="container mx-auto">
-    <div class="banner-content flex flex-col sm:flex-row justify-between gap-4 mt-4">
-        <div class="banner-right-part w-full sm:w-1/5 order-1 sm:order-3">
+  <div class="banner-content flex flex-col sm:flex-row justify-between gap-4 mt-4">
+      <div class="banner-right-part w-full sm:w-1/5 order-1 sm:order-3">
           <div class="login-reg border border-gray-500/20 p-4 mb-4">
             <div class="buttn flex justify-center gap-2 mt-2 mb-2">
            <button id="open-login-btn" type="button" class="bg-[#011F7F] text-white font-bold rounded-full px-6 py-2 
@@ -201,12 +201,15 @@
            <div class="sm-img-2 mt-4">
            <a href="#"><img src="images/sm-images-2.png" alt=""></a>
           </div>
+          <div class="sm-img-2 mt-4">
+           <a href="#"><img src="images/sm-banner-3.png" alt="" class=" w-full h-15"></a>
+          </div>
         </div>
-      </div>
+  </div>
   <!--============== Banner Middle Part==============-->
-  <div class="banner-middle-part w-full sm:w-4/6 order-2 sm:order-2 relative overflow-hidden  shadow-lg h-[300px] sm:h-[400px]">
-  <div class="flex justify-center">
-    <div class="relative w-full max-w-[800px] h-[300px] overflow-hidden ">
+  <div class="banner-middle-part w-full sm:w-4/6 order-2 sm:order-2 relative overflow-hidden">
+  <div class="flex justify-center pb-4">
+    <div class="relative w-full max-w-[800px] h-[250px] overflow-hidden ">
     <div id="slides-container" class="flex h-full transition-transform duration-500 ease-in-out">
       <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/banner-1.png');"></div>
       <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/banner-2.png');"></div>
@@ -218,16 +221,47 @@
     <i class="ri-arrow-right-s-line"></i></button>
     </div>
     </div>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum a labore porro voluptatibus repellat quia repudiandae similique nemo dolorem culpa architecto dignissimos at est consectetur doloremque dolorum, temporibus, deleniti molestias!</p>
-
+     <div class="product-items grid grid-cols-2 md:grid-cols-4 gap-4">
+  <div class="p-items border w-full border-gray-300 py-2 text-center">
+    <img src="images/electronic.png" alt="electronic" class="mx-auto">
+    <p>Electronics</p>
+  </div>
+  <div class="p-items border w-full border-gray-300 py-2 text-center">
+    <img src="images/cloth.png" alt="cloth" class="mx-auto">
+    <p>Clothings</p>
+  </div>
+  <div class="p-items border w-full border-gray-300 py-2 text-center">
+    <img src="images/bike.png" alt="bike" class="mx-auto">
+    <p>Motorbike</p>
+  </div>
+  <div class="p-items border w-full border-gray-300 py-2 text-center">
+    <img src="images/phne.png" alt="phone" class="mx-auto">
+    <p>Smartphone</p>
+  </div>
+  <div class="p-items border w-full border-gray-300 py-2 text-center">
+    <img src="images/home.png" alt="home" class="mx-auto">
+    <p>Home & Kitchen</p>
+  </div>
+  <div class="p-items border w-full border-gray-300 py-2 text-center">
+    <img src="images/acces.png" alt="accessories" class="mx-auto">
+    <p>Accessories</p>
+  </div>
+  <div class="p-items border w-full border-gray-300 py-2 text-center">
+    <img src="images/frutis.png" alt="fruits" class="mx-auto">
+    <p>Fruits</p>
+  </div>
+  <div class="p-items border w-full border-gray-300 py-2 text-center">
+    <img src="images/meats.png" alt="meats" class="mx-auto">
+    <p>Fresh Meats</p>
+  </div>
+</div>
       </div>
       <div class="banner-left-part w-full sm:w-1/5 border border-gray-500/20 p-4 order-3 sm:order-1">
         <div class="banner-menu pb-20">
           <h2 class="text-xl font-bold pb-2">Categories</h2>
           <div class="banner-menu-item">
             <ul class="pl-2 space-y-1">
-              <li><a href="#" class="font-semibold text-xl px-4 py-1 rounded-full bg-[#011F7F] text-white block">Electronics</a></li>
+              <li><a href="#technology-elec" class="font-semibold text-xl px-4 py-1 rounded-full bg-[#011F7F] text-white block">Electronics</a></li>
               <li><a href="#" class="font-semibold text-xl px-4 py-1 rounded-full hover:bg-[#011F7F] hover:text-white block">Clothings</a></li>
               <li><a href="#" class="font-semibold text-xl px-4 py-1 rounded-full hover:bg-[#011F7F] hover:text-white block">Accessories</a></li>
               <li><a href="#" class="font-semibold text-xl px-4 py-1 rounded-full hover:bg-[#011F7F] hover:text-white block">Home & Kitchen</a></li>
@@ -241,9 +275,6 @@
   </div>
 </section>
 <!--====================================================-->
-<div class="text-center py-10">
- <a href="admin-dashboard.html"><button class="btn btn-primary">Admin</button></a>
-</div>
 <!--=====================================================-->
 <!--================Banner Part End======================-->
 <!--===================Login from========================-->
@@ -305,13 +336,146 @@
   </div>
 </section>
 <!--===================Register form======================-->
+<!--====================Card Section Start================-->
+<section id="top-Categories" class="py-10">
+<div class="container mx-auto">
+  <div class="top-Categories-content">
+  <div class="top-Categories-heading">
+  <div class="top-heading pb-6">
+    <h2 class="font-bold text-3xl text-black">Top Categories Of The Month</h2>
+  </div>
+ <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  <div class="rounded-md border border-gray-200 bg-white p-4 hover:border-black transition">
+    <div class="flex flex-col sm:flex-row gap-4">
+      <img src="images/TV.png" alt="TV" class="w-full sm:w-40 h-40 sm:h-40 rounded" />
+      <div class="flex-1">
+        <h3 class="text-lg font-semibold text-gray-900">Tv Televisions</h3>
+        <div class="flex text-yellow-400 text-base mt-1">
+          <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+        </div>
+        <ul class="mt-2 space-y-1 text-sm text-gray-700">
+          <li><a href="#" class="hover:text-blue-600">Smart TV</a></li>
+          <li><a href="#" class="hover:text-blue-600">4K Ultra HD TVs</a></li>
+          <li><a href="#" class="hover:text-blue-600">LED TVs</a></li>
+          <li><a href="#" class="hover:text-blue-600">OLED TVs</a></li>
+          <li><a href="#" class="hover:text-blue-600">Accessories</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="rounded-md border border-gray-200 bg-white p-4 hover:border-black transition">
+    <div class="flex flex-col sm:flex-row gap-4">
+      <img src="images/AC.png" alt="Air Conditioner" class="w-full sm:w-40 h-40 sm:h-40 rounded" />
+      <div class="flex-1">
+        <h3 class="text-lg font-semibold text-gray-900">Air Conditioners</h3>
+        <div class="flex text-yellow-400 text-base mt-1">
+          <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+        </div>
+        <ul class="mt-2 space-y-1 text-sm text-gray-700">
+          <li><a href="#" class="hover:text-blue-600">Type Hanging On Wall</a></li>
+          <li><a href="#" class="hover:text-blue-600">Type Erect</a></li>
+          <li><a href="#" class="hover:text-blue-600">Type Hanging On Ceiling</a></li>
+          <li><a href="#" class="hover:text-blue-600">Accessories</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="rounded-md border border-gray-200 bg-white p-4 hover:border-black transition">
+    <div class="flex flex-col sm:flex-row gap-4">
+      <img src="images/wm.png" alt="Washing Machine" class="w-full sm:w-40 h-40 sm:h-40 rounded" />
+      <div class="flex-1">
+        <h3 class="text-lg font-semibold text-gray-900">Washing Machine</h3>
+        <div class="flex text-yellow-400 text-base mt-1">
+          <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+        </div>
+        <ul class="mt-2 space-y-1 text-sm text-gray-700">
+          <li><a href="#" class="hover:text-blue-600">Type Horizontal</a></li>
+          <li><a href="#" class="hover:text-blue-600">Type Vertical</a></li>
+          <li><a href="#" class="hover:text-blue-600">Type Drying Clothes</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="rounded-md border border-gray-200 bg-white p-4 hover:border-black transition">
+    <div class="flex flex-col sm:flex-row gap-4">
+      <img src="images/bX.png" alt="Speakers" class="w-full sm:w-40 h-40 sm:h-40 rounded" />
+      <div class="flex-1">
+        <h3 class="text-lg font-semibold text-gray-900">Audios &amp; Theaters</h3>
+        <div class="flex text-yellow-400 text-base mt-1">
+          <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+        </div>
+        <ul class="mt-2 space-y-1 text-sm text-gray-700">
+          <li><a href="#" class="hover:text-blue-600">Speakers</a></li>
+          <li><a href="#" class="hover:text-blue-600">Home Theater System</a></li>
+          <li><a href="#" class="hover:text-blue-600">Wireless Audio</a></li>
+          <li><a href="#" class="hover:text-blue-600">Headphone</a></li>
+          <li><a href="#" class="hover:text-blue-600">Accessories</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="rounded-md border border-gray-200 bg-white p-4 hover:border-black transition">
+    <div class="flex flex-col sm:flex-row gap-4">
+      <img src="images/pM.png" alt="Printer" class="w-full sm:w-40 h-40 sm:h-40 rounded" />
+      <div class="flex-1">
+        <h3 class="text-lg font-semibold text-gray-900">Office Electronics</h3>
+        <div class="flex text-yellow-400 text-base mt-1">
+          <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+        </div>
+        <ul class="mt-2 space-y-1 text-sm text-gray-700">
+          <li><a href="#" class="hover:text-blue-600">Printers</a></li>
+          <li><a href="#" class="hover:text-blue-600">Store &amp; Business</a></li>
+          <li><a href="#" class="hover:text-blue-600">Scanners</a></li>
+          <li><a href="#" class="hover:text-blue-600">Projectors</a></li>
+          <li><a href="#" class="hover:text-blue-600">Phones</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="rounded-md border border-gray-200 bg-white p-4 hover:border-black transition">
+    <div class="flex flex-col sm:flex-row gap-4">
+      <img src="images/ce.png" alt="Car Electronics" class="w-full sm:w-40 h-40 sm:h-40  rounded" />
+      <div class="flex-1">
+        <h3 class="text-lg font-semibold text-gray-900">Car Electronics</h3>
+        <div class="flex text-yellow-400 text-base mt-1">
+          <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+        </div>
+        <ul class="mt-2 space-y-1 text-sm text-gray-700">
+          <li><a href="#" class="hover:text-blue-600">Audio &amp; Video</a></li>
+          <li><a href="#" class="hover:text-blue-600">Radar Detector</a></li>
+          <li><a href="#" class="hover:text-blue-600">Car Security Products</a></li>
+          <li><a href="#" class="hover:text-blue-600">Vehicle GPS Tracking</a></li>
+          <li><a href="#" class="hover:text-blue-600">Portable CB Radios</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--====================Card Section Start================-->
 
 <!--================Banner Section End===============-->
 </main>
   <!--=================Main Part End====================-->
   <!--=================Footer Part Start================-->
   <footer>
-
+  <a href="admin-dashboard.html"><button class="btn bg-purple-950 text-white">Admin</button></a>
   </footer>
   <!--==================Footer Part End=================-->
   <!--==================JavaScrip Link====================-->
