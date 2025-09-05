@@ -23,10 +23,10 @@
 <body class="container mx-auto bg-gray-200">
 
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-6 lg:gap-4">
 
-        <aside class="col-span-1 row-span-12 h-full bg-white p-4">
-            <div class="fixed h-full px-3 py-4 overflow-y-auto">
+        <aside class="col-span-1 sm:col-span-1 row-span-12 h-full bg-white p-4">
+            <div class="lg:fixed h-full px-3 py-4 overflow-y-auto">
 
                 <ul class="space-y-2 font-medium my-24">
                 
@@ -78,7 +78,7 @@
 
         
         <div class="col-span-5">
-            <header class="flex justify-between items-center mb-8  p-8 border border-gray-200 rounded-b-lg bg-white">
+            <header class="flex justify-between items-center mb-8  p-8 border border-gray-200 rounded-b-lg bg-white gap-2">
                 <div class="w-6/12">
                     <div>
                         <form class="w-full">   
@@ -119,7 +119,7 @@
                         </svg>
                     </button>
         
-                    <img src="sh-img/sh-profile.jpg" alt="Profile.jpg" class="w-10 h-10 rounded-full">
+                    <img src="images/sh-profile.jpg" alt="Profile.jpg" class="w-10 h-10 rounded-full">
                     
                     <button data-popover-target="popover-default" type="button" class="font-semibold">Cartesian</button>
         
@@ -182,7 +182,7 @@
             <!-- main container -->
             <main class="h-screen w-full">
                 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-4">
 
                     <!-- card 1 -->
                     <div class="lg:col-span-1 h-[200px] border rounded-xl border-gray-300 p-5 bg-white drop-shadow-md flex flex-col">
@@ -332,6 +332,18 @@
                         </div>
                     </div>
 
+
+                    <!-- Table -->
+                    <section class="bg-gray-50 py-3 sm:py-5 lg:col-span-4 h-full">
+                        <div>
+                            <Table class="table-auto">
+                                <tr>
+                                    <th>Hello</th>
+                                </tr>
+                            </Table>
+                        </div>
+                    </section>
+
                 
             </main>
             
@@ -340,9 +352,9 @@
     
 
 
-<script src="/sh-js/sh-linechart.js"></script>
-<script src="/sh-js/sh-pie.js"></script>
-<script src="/sh-js/sh-barchart.js"></script>
+<script src="js/sh-linechart.js"></script>
+<script src="js/sh-pie.js"></script>
+<script src="js/sh-barchart.js"></script>
 
 
 
