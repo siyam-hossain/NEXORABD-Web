@@ -25,7 +25,7 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-6 lg:gap-4">
 
-        <aside class="col-span-1 sm:col-span-1 row-span-12 h-full bg-white p-4">
+        <aside class="col-span-1 sm:col-span-1 row-span-12 lg:h-[1800px] bg-white p-4">
             <div class="lg:fixed h-full px-3 py-4 overflow-y-auto">
 
                 <ul class="space-y-2 font-medium my-24">
@@ -334,12 +334,377 @@
 
 
                     <!-- Table -->
-                    <section class="bg-gray-50 py-3 sm:py-5 lg:col-span-4 h-full">
-                        <div>
-                            <Table class="table-auto">
-                                <tr>
-                                    <th>Hello</th>
-                                </tr>
+                    <section class="lg:col-span-4 h-full border rounded-xl border-gray-300 bg-white drop-shadow-md flex flex-col shadow-lg p-3">
+                        <div class="overflow-auto border rounded-xl">
+                            <Table class="w-full border">
+                                <thead class="bg-gray-200 text-gray-600">
+                                    <tr>
+                                        <th class="p-3 text-sm font-bold tracking-wide text-left"><input type="checkbox"></th>
+                                        <th class="w-52 p-3 text-sm font-bold tracking-wide text-left">Product</th>
+                                        <th class="p-3 text-sm font-bold tracking-wide text-left">Category</th>
+                                        <th class="p-3 text-sm font-bold tracking-wide text-left">Stock</th>
+                                        <th class="p-3 text-sm font-bold tracking-wide text-left">Sales/Day</th>
+                                        <th class="p-3 text-sm font-bold tracking-wide text-left">Sales/Month</th>
+                                        <th class="p-3 text-sm font-bold tracking-wide text-left">Rating</th>
+                                        <th class="p-3 text-sm font-bold tracking-wide text-left">Revenue</th>
+                                        <th class="p-3 text-sm font-bold tracking-wide text-left">Last Update</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y text-gray-500 font-bold">
+                                    <!-- row-2 -->
+                                    <tr class="p-3">
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap"><input type="checkbox"></td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap flex justify-start items-center gap-2">
+                                            <img class="w-8 h-8 rounded-full border-2 border-gray-300"  src="images/apple 27.jpg" alt="">
+                                            <span>Apple iMac 27"</span>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex justify-start items-center gap-2">
+                                                <div class="w-5 h-5 rounded-full bg-red-600"></div>
+                                                <span>95</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            1.47
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            0.47
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex">
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex gap-2">
+                                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"></path></svg>
+                                                <span>2.2</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            Today
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr class="p-3">
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap"><input type="checkbox"></td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap flex justify-start items-center gap-2">
+                                            <img class="w-8 h-8 rounded-full border-2 border-gray-300"  src="images/iphone 16 pro max.jpg" alt="">
+                                            <span>iPhone 16 Pro Max"</span>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Smart phone</span>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex justify-start items-center gap-2">
+                                                <div class="w-5 h-5 rounded-full bg-red-600"></div>
+                                                <span>95</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            1.47
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            0.47
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex">
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex gap-2">
+                                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"></path></svg>
+                                                <span>2.2</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            Today
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr class="p-3">
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap"><input type="checkbox"></td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap flex justify-start items-center gap-2">
+                                            <img class="w-8 h-8 rounded-full border-2 border-gray-300"  src="images/apple 27.jpg" alt="">
+                                            <span>Apple iMac 27"</span>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex justify-start items-center gap-2">
+                                                <div class="w-5 h-5 rounded-full bg-red-600"></div>
+                                                <span>95</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            1.47
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            0.47
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex">
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex gap-2">
+                                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"></path></svg>
+                                                <span>2.2</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            Today
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr class="p-3">
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap"><input type="checkbox"></td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap flex justify-start items-center gap-2">
+                                            <img class="w-8 h-8 rounded-full border-2 border-gray-300"  src="images/apple 27.jpg" alt="">
+                                            <span>Apple iMac 27"</span>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex justify-start items-center gap-2">
+                                                <div class="w-5 h-5 rounded-full bg-red-600"></div>
+                                                <span>95</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            1.47
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            0.47
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex">
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex gap-2">
+                                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"></path></svg>
+                                                <span>2.2</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            Today
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr class="p-3">
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap"><input type="checkbox"></td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap flex justify-start items-center gap-2">
+                                            <img class="w-8 h-8 rounded-full border-2 border-gray-300"  src="images/apple 27.jpg" alt="">
+                                            <span>Apple iMac 27"</span>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex justify-start items-center gap-2">
+                                                <div class="w-5 h-5 rounded-full bg-red-600"></div>
+                                                <span>95</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            1.47
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            0.47
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex">
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex gap-2">
+                                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"></path></svg>
+                                                <span>2.2</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            Today
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr class="p-3">
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap"><input type="checkbox"></td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap flex justify-start items-center gap-2">
+                                            <img class="w-8 h-8 rounded-full border-2 border-gray-300"  src="images/apple 27.jpg" alt="">
+                                            <span>Apple iMac 27"</span>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex justify-start items-center gap-2">
+                                                <div class="w-5 h-5 rounded-full bg-red-600"></div>
+                                                <span>95</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            1.47
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            0.47
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex">
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex gap-2">
+                                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"></path></svg>
+                                                <span>2.2</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            Today
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr class="p-3">
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap"><input type="checkbox"></td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap flex justify-start items-center gap-2">
+                                            <img class="w-8 h-8 rounded-full border-2 border-gray-300"  src="images/apple 27.jpg" alt="">
+                                            <span>Apple iMac 27"</span>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex justify-start items-center gap-2">
+                                                <div class="w-5 h-5 rounded-full bg-red-600"></div>
+                                                <span>95</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            1.47
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            0.47
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex">
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex gap-2">
+                                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"></path></svg>
+                                                <span>2.2</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            Today
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr class="p-3">
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap"><input type="checkbox"></td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap flex justify-start items-center gap-2">
+                                            <img class="w-8 h-8 rounded-full border-2 border-gray-300"  src="images/apple 27.jpg" alt="">
+                                            <span>Apple iMac 27"</span>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex justify-start items-center gap-2">
+                                                <div class="w-5 h-5 rounded-full bg-red-600"></div>
+                                                <span>95</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            1.47
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            0.47
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex">
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex gap-2">
+                                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"></path></svg>
+                                                <span>2.2</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            Today
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr class="p-3">
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap"><input type="checkbox"></td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap flex justify-start items-center gap-2">
+                                            <img class="w-8 h-8 rounded-full border-2 border-gray-300"  src="images/apple 27.jpg" alt="">
+                                            <span>Apple iMac 27"</span>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex justify-start items-center gap-2">
+                                                <div class="w-5 h-5 rounded-full bg-red-600"></div>
+                                                <span>95</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            1.47
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            0.47
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex">
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                                <svg class="w-5 h-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            <div class="flex gap-2">
+                                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"></path></svg>
+                                                <span>2.2</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap">
+                                            Today
+                                        </td>
+                                        
+                                    </tr>
+                                </tbody>
+                                <!-- <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-600 bg-yellow-100 rounded-lg">test</span> -->
                             </Table>
                         </div>
                     </section>
