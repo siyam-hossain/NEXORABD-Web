@@ -24,7 +24,7 @@
 </head>
 <body class="font-inter">
 <!--=================Header Part Start==============--> 
-<header id="header-full" class="px-3 w-full fixed sm:px-0 bg-[#011F7F] border-b border-gray-500/50">
+<header id="header-full" class="px-3 w-full fixed sm:px-0 bg-[#011F7F] z-51 border-b border-gray-500/50">
   <div class="header-main border-b border-gray-500/50">
     <div id="header-content" class="container mx-auto">
      <div class="header-top-content flex items-center justify-between py-2">
@@ -178,9 +178,11 @@
         <div class="banner-right-part w-full sm:w-1/5 order-1 sm:order-3">
           <div class="login-reg border border-gray-500/20 p-4 mb-4">
             <div class="buttn flex justify-center gap-2 mt-2 mb-2">
-            <button type="button" class="bg-[#011F7F] text-white font-bold rounded-full px-6 py-2 border border-transparent hover:bg-white hover:text-black hover:border-black transition-all duration-300">Login</button>
-            <button type="button" class="bg-white text-black font-bold rounded-full px-5 py-2 border border-black hover:bg-black hover:text-white transition-all duration-300">
-            Register</button>
+           <button id="open-login-btn" type="button" class="bg-[#011F7F] text-white font-bold rounded-full px-6 py-2 
+           border border-transparent hover:bg-white hover:text-black hover:border-black 
+           transition-all duration-300">Login</button>
+          <button id="open-register-btn" type="button"class="bg-white text-black font-bold rounded-full px-5 py-2 border border-black 
+           hover:bg-black hover:text-white transition-all duration-300">Register</button>        
           </div>
           <div class="social-link text-center">
             <p>Or continue with</p>
@@ -201,11 +203,24 @@
           </div>
         </div>
       </div>
-      <!--============== Banner Middle Part==============-->
-      <div class="banner-middle-part w-full sm:w-4/6 border border-gray-500/20 p-4 order-2 sm:order-2">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque repellendus temporibus voluptatibus modi ullam eum vitae quos minus laboriosam qui quidem harum eligendi voluptatum iste facere ducimus, autem iusto numquam!
-        </p>
+  <!--============== Banner Middle Part==============-->
+  <div class="banner-middle-part w-full sm:w-4/6 order-2 sm:order-2 relative overflow-hidden  shadow-lg h-[300px] sm:h-[400px]">
+  <div class="flex justify-center">
+    <div class="relative w-full max-w-[800px] h-[300px] overflow-hidden ">
+    <div id="slides-container" class="flex h-full transition-transform duration-500 ease-in-out">
+      <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/banner-1.png');"></div>
+      <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/banner-2.png');"></div>
+      <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/banner-3.png');"></div>
+    </div>
+    <button id="prev-slide"class="absolute top-1/2 -translate-y-1/2 left-2 sm:left-4 bg-transparent hover:bg-[#011F7F] text-black hover:text-white w-12 h-12 rounded-full flex items-center justify-center text-4xl z-50 transition-colors duration-300">
+    <i class="ri-arrow-left-s-line"></i></button>
+    <button id="next-slide"class="absolute top-1/2 -translate-y-1/2 right-2 sm:right-4 bg-transparent hover:bg-[#011F7F] text-black hover:text-white w-12 h-12 rounded-full flex items-center justify-center text-4xl z-50transition-colors duration-300">
+    <i class="ri-arrow-right-s-line"></i></button>
+    </div>
+    </div>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum a labore porro voluptatibus repellat quia repudiandae similique nemo dolorem culpa architecto dignissimos at est consectetur doloremque dolorum, temporibus, deleniti molestias!</p>
+
       </div>
       <div class="banner-left-part w-full sm:w-1/5 border border-gray-500/20 p-4 order-3 sm:order-1">
         <div class="banner-menu pb-20">
@@ -222,25 +237,83 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
-
+<!--====================================================-->
 <div class="text-center py-10">
  <a href="admin-dashboard.html"><button class="btn btn-primary">Admin</button></a>
 </div>
+<!--=====================================================-->
+<!--================Banner Part End======================-->
+<!--===================Login from========================-->
+<section id="lgn-from">
+<div id="login-overlay" class="fixed inset-0 z-100 bg-white bg-opacity-50 hidden flex items-center justify-center z-50">
+      <div id="login-form" class="w-[500px] h-[500px] bg-white shadow-xl rounded-xl p-6 transform translate-x-full transition-transform duration-500 ease-in-out relative">
+          <i id="close-login-btn" class="ri-close-line absolute top-4 right-4 text-2xl cursor-pointer"></i>
+          <form action="">
+              <h3 class="text-2xl font-bold mb-4">Sign in</h3>
+              <span class="block mb-1">Username</span>
+              <input type="email" class="w-full border p-2 rounded mb-4" placeholder="enter your email">
+              <span class="block mb-1">Password</span>
+              <input type="password" class="w-full border p-2 rounded mb-4" placeholder="enter your password">
+              <div class="flex items-center mb-4">
+                  <input type="checkbox" id="remember-me"class="w-4 h-4 text-[#011F7F] border-gray-300 rounded focus:ring-[#011F7F]">
+                  <label for="remember-me" class="ml-2 text-gray-700">Remember me</label>
+              </div>
+              <input type="submit" value="Sign in"class="bg-[#011F7F] text-white w-full py-2 rounded cursor-pointer">
+              <p class="mt-4">Forget password? <a href="#" class="text-blue-600">Click here</a></p>
+              <p>Don't have an account? <a href="#" class="text-blue-600">Create one</a></p>
+          </form>
+      </div>
+  </div>
+</section>
+<!--===================Login from========================-->
+<!--===================Register form======================-->
+<section id="reg-forms">
+  <div id="register-overlay" class="fixed inset-0 hidden z-100 flex items-center justify-center">
+    <div class="absolute inset-0 bg-white bg-opacity-50"></div>
+    <div id="register-form" class="relative w-[95%] sm:w-[500px] max-w-[500px] h-[95%] sm:h-[600px] bg-white shadow-xl rounded-xl p-6
+      transform translate-x-full transition-transform duration-500 ease-in-out overflow-auto">
+      <button id="close-register-btn" class="absolute top-2 sm:top-4 right-2 sm:right-4 text-gray-500 hover:text-[#011F7F] z-50">
+        <i class="ri-close-circle-fill text-3xl sm:text-4xl"></i>
+      </button>
+      <form class="h-full flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-bold mb-4 text-center sm:text-left">Create Account</h3>
+          <label class="block mb-1">Full Name</label>
+          <input type="text" class="w-full border p-2 rounded mb-4" placeholder="Enter your name">
+          <label class="block mb-1">Email</label>
+          <input type="email" class="w-full border p-2 rounded mb-4" placeholder="Enter your email">
+          <label class="block mb-1">Password</label>
+          <input type="password" class="w-full border p-2 rounded mb-4" placeholder="Create a password">
+          <label class="block mb-1">Confirm Password</label>
+          <input type="password" class="w-full border p-2 rounded mb-4" placeholder="Confirm your password">
+          <div class="flex items-center mb-2">
+            <input type="checkbox" id="terms" class="w-4 h-4 text-[#011F7F] border-gray-300 rounded focus:ring-[#011F7F]">
+            <label for="terms" class="ml-2 text-gray-700 text-sm sm:text-base">I agree to the Terms & Conditions</label>
+          </div>
+        </div>
+        <div>
+          <input type="submit" value="Register" class="bg-[#011F7F] text-white w-full py-2 rounded cursor-pointer hover:bg-[#022bbf] transition mb-4">
+          <p class="text-center pb-2 sm:text-left text-sm sm:text-base">Already have an account? 
+            <a href="#" class="text-blue-600 hover:underline">Login here</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<!--===================Register form======================-->
 
-   <!--================Banner Part End==================-->
-   <!--================Banner Section End===============-->
-  </main>
+<!--================Banner Section End===============-->
+</main>
   <!--=================Main Part End====================-->
   <!--=================Footer Part Start================-->
   <footer>
 
   </footer>
   <!--==================Footer Part End=================-->
-   
   <!--==================JavaScrip Link====================-->
   <script src="js/script.js"></script>
 </body>
