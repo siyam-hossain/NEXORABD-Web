@@ -116,9 +116,7 @@ const autoSlide = setInterval(() => {
 const slider = document.getElementById('slider');
 const next = document.getElementById('next');
 const prev = document.getElementById('prev');
-const scrollAmount = 240; // Width + gap of each card
-
-// Arrow navigation
+const scrollAmount = 240; 
 next.addEventListener('click', () => {
   slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
 });
@@ -127,9 +125,7 @@ prev.addEventListener('click', () => {
   slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
 });
 
-// Automatic sliding every 2 seconds
 setInterval(() => {
-  // Check if we are at the end
   if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
     slider.scrollTo({ left: 0, behavior: 'smooth' }); // Reset to start
   } else {
@@ -137,73 +133,23 @@ setInterval(() => {
   }
 }, 2000);
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const slider = document.getElementById('slider');
-//   const leftArrow = document.getElementById('leftArrow');
-//   const rightArrow = document.getElementById('rightArrow');
+// =============================================
+const slider_2 = document.getElementById('slider_2');
+const next_2 = document.getElementById('next_2');
+const prev_2 = document.getElementById('prev_2');
+const scrollAmount_2 = 240; 
+next_2.addEventListener('click', () => {
+  slider_2.scrollBy({ left: scrollAmount_2, behavior: 'smooth' });
+});
 
-//   const card = slider.querySelector('.group') || slider.querySelector('.flex-shrink-0');
-//   const cardWidth = card.getBoundingClientRect().width;
-//   const gap = 24; // Tailwind gap-6
-//   const slideAmount = cardWidth + gap;
+prev_2.addEventListener('click', () => {
+  slider_2.scrollBy({ left: -scrollAmount_2, behavior: 'smooth' });
+});
 
-//   // Arrow click functionality
-//   leftArrow.addEventListener('click', () => slider.scrollBy({ left: -slideAmount, behavior: 'smooth' }));
-//   rightArrow.addEventListener('click', () => slider.scrollBy({ left: slideAmount, behavior: 'smooth' }));
-
-//   // Auto-slide every 2 seconds
-//   setInterval(() => {
-//     if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
-//       slider.scrollTo({ left: 0, behavior: 'smooth' });
-//     } else {
-//       slider.scrollBy({ left: slideAmount, behavior: 'smooth' });
-//     }
-//   }, 2000);
-// });
-// document.addEventListener('DOMContentLoaded', () => {
-//   const slider = document.getElementById('slider');
-//   const leftArrow = document.getElementById('leftArrow');
-//   const rightArrow = document.getElementById('rightArrow');
-
-//   const card = slider.querySelector('.group');
-//   const cardWidth = card.getBoundingClientRect().width;
-//   const gap = 24; // Tailwind gap-6
-//   const slideAmount = cardWidth + gap;
-
-//   // Arrow click functionality
-//   leftArrow.addEventListener('click', () => slider.scrollBy({ left: -slideAmount, behavior: 'smooth' }));
-//   rightArrow.addEventListener('click', () => slider.scrollBy({ left: slideAmount, behavior: 'smooth' }));
-
-//   // Continuous auto slide
-//   let scrollPos = 0;
-//   const speed = 1;
-
-//   function autoScroll() {
-//     scrollPos += speed;
-//     if (scrollPos >= slider.scrollWidth - slider.clientWidth) scrollPos = 0;
-//     slider.scrollLeft = scrollPos;
-//     requestAnimationFrame(autoScroll);
-//   }
-//   autoScroll();
-// });
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   const slider = document.getElementById('slider');
-//   const leftArrow = document.getElementById('leftArrow');
-//   const rightArrow = document.getElementById('rightArrow');
-
-//   // Get card width dynamically (assumes all cards same width)
-//   const card = slider.querySelector('.group');
-//   const cardWidth = card.getBoundingClientRect().width;
-//   const gap = 24; // Tailwind gap-6 = 1.5rem = 24px
-//   const slideAmount = cardWidth + gap;
-
-//   leftArrow.addEventListener('click', () => {
-//     slider.scrollBy({ left: -slideAmount, behavior: 'smooth' });
-//   });
-
-//   rightArrow.addEventListener('click', () => {
-//     slider.scrollBy({ left: slideAmount, behavior: 'smooth' });
-//   });
-// });
-
+setInterval(() => {
+  if (slider_2.scrollLeft + slider_2.clientWidth >= slider_2.scrollWidth) {
+    slider_2.scrollTo({ left: 0, behavior: 'smooth' });
+  } else {
+    slider_2.scrollBy({ left: scrollAmount_2, behavior: 'smooth' });
+  }
+}, 2000);
