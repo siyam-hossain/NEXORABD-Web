@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXORABD</title>
+    <!--=======================Google Font================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!--=======================Google Font================-->
+    <!--==================================================-->
+    <!--====================Tailwind Css==================-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--====================Tailwind Css==================-->
+    <!--==================================================-->
+    <!--==================Rimix Icon======================-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+    <!--==================Rimix Icon======================-->
+    <!--================CSS LINK==========================-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--================CSS LINK==========================-->
+</head>
+<body class="font-inter">
+<!--=================Header Part Start===============================================--> 
+<header id="header-full" class="px-3 w-full fixed sm:px-0 bg-[#011F7F] z-51 border-b border-gray-500/50">
+  <div class="header-main border-b-0 sm:border-b-1 border-gray-500/50">
+    <div id="header-content" class="container mx-auto">
+      <div class="header-top-content flex items-center justify-between py-2">
+        <div class="logo">
+          <a href="#">
+            <img src="images/logo.png" alt="logo" class="h-12 sm:h-15">
+          </a>
+        </div>
+        <div class="hidden sm:block search-bar">
+          <div class="relative w-[430px]">
+            <input type="text" placeholder="Search NEXORABD"class="w-full bg-white rounded-full px-5 py-2 pr-12 text-gray-700 border focus:outline-none"/>
+            <button class="absolute right-1.5 top-1/2 -translate-y-1/2 bg-[#011F7F] text-white rounded-full w-10 h-8 flex items-center justify-center">
+            <i class="ri-search-line text-white text-sm"></i>
+            </button>
+          </div>
+        </div>
+        <div class="hidden sm:flex header-r-items items-center gap-6">
+          <div class="item flex items-center border-r border-gray-500/50 pr-4">
+            <i class="ri-microsoft-fill text-white text-3xl"></i>
+            <div class="ml-2">
+              <p class="text-white text-sm">Download the</p>
+              <a href="#" class="text-white text-sm">NexoraBD App</a>
+            </div>
+          </div>
+          <div class="item flex items-center border-r border-gray-500/50 pr-4">
+            <i class="ri-user-fill text-white text-3xl"></i>
+            <div class="ml-2">
+              <p class="text-white text-sm">Welcome to</p>
+              <a href="#" class="text-white text-sm">Sign in/Register</a>
+            </div>
+          </div>
+          <div class="item flex items-center">
+            <i class="ri-shopping-cart-line text-white text-3xl"></i>
+            <div class="pl-2 flex flex-col items-center">
+              <span class="bg-[#D4024E] text-white text-sm font-bold px-3 rounded-full">0</span>
+              <p class="text-white text-sm">Cart</p>
+            </div>
+          </div>
+        </div>
+        <div class="sm:hidden flex items-center gap-4">
+          <div class="flex items-center relative">
+            <i class="ri-shopping-cart-line text-white text-3xl"></i>
+            <span class="absolute -top-2 -right-2 bg-[#D4024E] text-white text-xs font-bold px-2 rounded-full">0</span>
+          </div>
+          <button class="text-white text-3xl" id="mobileMenuBtn">
+            <i class="ri-menu-line"></i>
+          </button>
+        </div>
+      </div>
+      <div class="sm:hidden mt-2 mb-4">
+        <div class="relative w-full">
+          <input type="text" placeholder="Search NEXORABD"class="w-full bg-white rounded-full px-5 py-2 pr-10 text-gray-700 border focus:outline-none" />
+          <button class="absolute right-1.5 top-1/2 -translate-y-1/2 bg-[#011F7F] text-white rounded-full w-8 h-8 flex items-center justify-center">
+          <i class="ri-search-line text-white text-sm"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu-full bg-[#011F7F] text-white hidden sm:block">
+    <div class="container mx-auto flex items-center justify-between py-2">
+      <div class="relative select-option hidden sm:block">
+        <select class="select w-[300px] rounded-full pl-10 pr-4 py-2 text-black focus:outline-none">
+          <option disabled selected>All Categories</option>
+          <option>Electronics</option>
+          <option>Clothings</option>
+          <option>Accessories</option>
+          <option>Home & Kitchen</option>
+          <option>Smartphone</option>
+          <option>Motorbike</option>
+        </select>
+      <i class="ri-menu-line absolute left-3 top-1/2 -translate-y-1/2 text-xl text-black"></i>
+      </div>
+      <ul class="hidden sm:flex items-center space-x-8">
+        <li><a href="#" class="hover:text-yellow-400 font-semibold">Bestsellers</a></li>
+        <li><a href="#" class="hover:text-yellow-400 font-semibold">Top Brands</a></li>
+        <li><a href="#" class="hover:text-yellow-400 font-semibold">Home & Garden</a></li>
+        <li><a href="#" class="hover:text-yellow-400 font-semibold">Hair Extensions & Wigs</a></li>
+        <li>
+          <div class="dropdown dropdown-hover">
+            <a href="#" class="flex items-center hover:text-yellow-400 font-bold">
+              More <i class="ri-arrow-down-s-line ml-1"></i>
+            </a>
+            <ul tabindex="0" class="dropdown-content menu bg-white text-black rounded-box z-10 w-52 p-2 shadow-sm">
+              <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Today’s Deals</a></li>
+              <li><a href="#">Trending Now</a></li>
+              <li><a href="#">Flash Sale</a></li>
+              <li><a href="#">Top Rated</a></li>
+              <li><a href="#">Clearance</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div class="hidden sm:flex items-center font-semibold">
+        <i class="ri-phone-fill mr-2 text-yellow-400"></i> Hot Line : +88002255444
+      </div>
+    </div>
+  </div>
+  <div id="mobileSidebar"
+    class="fixed top-0 left-0 h-full w-64 bg-[#011F7F] text-white transform -translate-x-full transition-transform duration-300 z-50">
+    <div class="p-4 flex justify-between items-center border-b border-gray-500/50">
+      <h2 class="text-lg font-bold">Menu</h2>
+      <button id="closeSidebar" class="text-2xl">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+    <ul class="flex flex-col p-4 space-y-4">
+      <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">Bestsellers</a></li>
+      <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">Top Brands</a></li>
+      <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">Home & Garden</a></li>
+      <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">Hair Extensions & Wigs</a></li>
+      <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">New Arrivals</a></li>
+      <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">Today’s Deals</a></li>
+      <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">Hot Line: +88002255444</a></li>
+    </ul>
+  </div>
+  <div id="overlay" class="fixed inset-0 bg-black/50 hidden z-40"></div>
+</header>
+<!--=================Header Section End===============-->
+<!--==================Main Part Start=================-->
+<main>
+   
+
+
+
+
+
+
+
+
+
+
+</main>
+  <!--=================Main Part End====================-->
+  <!--=================Footer Part Start================-->
+  
+  <!--==================Footer Part End=================-->
+  <!--==================JavaScrip Link====================-->
+  <script src="js/smartphone.js"></script>
+</body>
+</html>
