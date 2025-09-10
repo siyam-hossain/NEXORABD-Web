@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    /* Sidebar */
+    .sidebar {
+      width: 180px;
+      background-color: white;
+      padding: 16px 8px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+      box-sizing: border-box;
+    }
+    .sidebar-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .menu-label {
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .dashboard-button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .dashboard-button:hover {
+      background-color: #f0f0f0;
+    }
+    .dashboard-button.selected {
+      background-color: #e0e0ff;
+    }
+    .dashboard-button img {
+      width: 20px;
+      height: 20px;
+    }
+    /* Main content */
+    .main-content {
+      flex: 1;
+      background-color: #efefef;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Header (search + icons) */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .search-bar {
+      flex: 1;
+      height: 36px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 0 10px;
+      font-size: 14px;
+    }
+    .header .icon {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+    /* Content */
+    .new-product {
+      color: #3465ff;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .content-panels {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .panel {
+      background-color: white;
+      border-radius: 6px;
+      padding: 15px;
+      flex: 1;
+      min-width: 300px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .panel h3 {
+      color: #4c4f6b;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .section {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+    .section label {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 5px;
+    }
+    .field {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    .field.combobox {
+      appearance: none;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+      background-size: 12px;
+    }
+    .image-upload {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      width: fit-content;
+    }
+    .image-upload img {
+      width: 20px;
+      height: 20px;
+    }
+    .image-preview {
+      width: 100%;
+      height: 150px;
+      background-color: #f0f0f0;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+    .add, .discard {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .add {
+      background-color: #3465ff;
+      color: white;
+    }
+    .discard {
+      background-color: #ccc;
+      color: #333;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+      }
+      .content-panels {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-menu">
+        <div class="menu-label">Menu</div>
+        <div class="dashboard-button selected">
+          <img src="https://via.placeholder.com/20?text=D" alt="Dashboard">
+          <span>Dashboard</span>
+        </div>
+        <div class="dashboard-button">
+          <img src="https://via.placeholder.com/20?text=A" alt="Add">
+          <span>Add</span>
+        </div>
+        <div class="dashboard-button">
+          <img src="https://via.placeholder.com/20?text=U" alt="Update">
+          <span>Update</span>
+        </div>
+        <div class="dashboard-button">
+          <img src="https://via.placeholder.com/20?text=D" alt="Delete">
+          <span>Delete</span>
+        </div>
+        <div class="dashboard-button">
+          <img src="https://via.placeholder.com/20?text=S" alt="Sign Out">
+          <span>Sign Out</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+      <!-- Header -->
+      <div class="header">
+        <input type="text" class="search-bar" placeholder="Search...">
+        <img class="icon" src="https://via.placeholder.com/24?text=S" alt="Search">
+        <img class="icon" src="https://via.placeholder.com/24?text=N" alt="Notification">
+        <img class="icon" src="https://via.placeholder.com/24?text=U" alt="User">
+      </div>
+
+      <div class="new-product">New Product</div>
+      <div class="content-panels">
+        <!-- Left Panel -->
+        <div class="panel">
+          <h3>Description</h3>
+          <div class="section">
+            <label for="pname">Product Name</label>
+            <input id="pname" type="text" class="field" placeholder="Enter product name">
+            <label for="pid">Product ID</label>
+            <input id="pid" type="text" class="field" placeholder="Enter product ID">
+            <label for="pdesc">Product Description</label>
+            <textarea id="pdesc" class="field" rows="4" placeholder="Enter product description"></textarea>
+          </div>
+          <h3>Category</h3>
+          <div class="section">
+            <label for="pcat">Product Category</label>
+            <select id="pcat" class="field combobox">
+              <option>Select category</option>
+            </select>
+          </div>
+          <h3>Quantity</h3>
+          <div class="section">
+            <label for="pqty">Product Quantity</label>
+            <input id="pqty" type="text" class="field" placeholder="Enter quantity">
+          </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="panel">
+          <h3>Product Image</h3>
+          <div class="section">
+            <div class="image-preview"></div>
+            <div class="image-upload">
+              <img src="https://via.placeholder.com/20?text=U" alt="Upload">
+              <span>Add Image</span>
+            </div>
+          </div>
+          <h3>Pricing</h3>
+          <div class="section">
+            <label for="pprice">Product Price</label>
+            <input id="pprice" type="text" class="field" placeholder="Enter price">
+          </div>
+          <h3>Size</h3>
+          <div class="section">
+            <label for="psize">Product Size | Weight | Quantity</label>
+            <input id="psize" type="text" class="field" placeholder="Enter size/weight/quantity">
+          </div>
+          <h3>Date</h3>
+          <div class="section">
+            <label for="pdate">Date</label>
+            <input id="pdate" type="date" class="field">
+          </div>
+          <div class="buttons">
+            <button class="discard">Discard</button>
+            <button class="add">Add Product</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.dashboard-button').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.dashboard-button').forEach(btn => btn.classList.remove('selected'));
+        button.classList.add('selected');
+      });
+    });
+  </script>
+</body>
+</html>

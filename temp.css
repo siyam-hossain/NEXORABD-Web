@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 
+    200px 1fr
+    ;
+    grid-template-rows: 
+    auto 1fr auto
+    ;
+    grid-template-areas: 
+    /* "navbar navbar" */
+    "sidebar navbar"
+    "sidebar main"
+    "sidebar footer"
+    ;
+}
+nav{
+    position: sticky;
+    top: 0px;
+    grid-area: navbar;
+    background: blueviolet;
+    color: white;
+    padding: 1em;
+    height: 70px;
+}
+aside{
+    /* height: calc(100vh - 70px); */
+    height: 100vh;
+    position: sticky;
+    /* top: 70px; */
+    top: 0px;
+    align-self: start;
+    grid-area: sidebar;
+    background: orange;
+}
+main{
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    padding: 2em;
+}
+
+
+
+@media(max-width: 600px){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto; 
+        grid-template-areas: 
+            "navbar"
+            "sidebar"
+            "main"
+            "footer"
+        ;
+    }
+
+    aside{
+        position: sticky;
+        height: 60px;
+        padding: 1em;
+        display: none;
+        border-radius: 8px;
+    }
+
+    .show{
+        display: block;
+    }
+}
+@media(max-width: 1024px){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto; 
+        grid-template-areas: 
+            "navbar"
+            "sidebar"
+            "main"
+            "footer"
+        ;
+    }
+
+    aside{
+        position: sticky;
+        height: 60px;
+        padding: 1em;
+        display: none;
+        
+    }
+
+    .show{
+        display: block;
+    }
+}
+@media(max-width: 1444px){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto; 
+        grid-template-areas: 
+            "navbar"
+            "sidebar"
+            "main"
+            "footer"
+        ;
+    }
+
+    aside{
+        position: sticky;
+        height: 60px;
+        padding: 1em;
+        display: none;
+    }
+
+    .show{
+        display: block;
+    }
+}
