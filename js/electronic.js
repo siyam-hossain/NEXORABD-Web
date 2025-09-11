@@ -26,3 +26,58 @@ menuItems.forEach(item => {
     item.classList.add("text-yellow-400");
   });
 });
+//=====================================================
+ let cart = [];
+    const cartCount = document.getElementById("cart-count");
+    const cartItemsContainer = document.getElementById("cart-items");
+    const cartTotal = document.getElementById("cart-total");
+    const cartSidebar = document.getElementById("cart-sidebar");
+
+    document.querySelectorAll(".add-to-cart").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const card = e.target.closest(".group");
+        const name = card.querySelector("p").innerText;
+        const priceText = card.querySelector("h3").innerText.replace("BDT: ", "");
+        const price = parseInt(priceText);
+        const img = card.querySelector("img").src;
+
+        cart.push({ name, price, img });
+        cartCount.innerText = cart.length;
+        renderCart();
+      });
+    });
+    function renderCart() {
+      cartItemsContainer.innerHTML = "";
+      let total = 0;
+      cart.forEach((item, index) => {
+        total += item.price;
+        const div = document.createElement("div");
+        div.classList = "flex items-center justify-between  p-2 rounded shadow";
+        div.innerHTML = `
+          <div class="flex items-center gap-2">
+            <img src="${item.img}" alt="${item.name}" class="w-12 h-12 object-cover rounded">
+            <div>
+              <p class="font-semibold text-sm">${item.name}</p>
+              <p class="text-xs text-gray-600">BDT ${item.price}</p>
+            </div>
+          </div>
+          <button onclick="removeFromCart(${index})" class="text-red-500 hover:text-red-700">
+            <i class="ri-delete-bin-line"></i>
+          </button>
+        `;
+        cartItemsContainer.appendChild(div);
+      });
+
+      cartTotal.innerText = "BDT " + total;
+    }
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      cartCount.innerText = cart.length;
+      renderCart();
+    }
+    document.getElementById("cart-icon").addEventListener("click", () => {
+      cartSidebar.classList.remove("translate-x-full");
+    });
+    document.getElementById("close-cart").addEventListener("click", () => {
+      cartSidebar.classList.add("translate-x-full");
+    });
