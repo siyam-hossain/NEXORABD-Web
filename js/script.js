@@ -203,21 +203,15 @@ let cart = [];
 
       cartTotal.innerText = "BDT " + total;
     }
-
-    // Remove from cart
     function removeFromCart(index) {
       cart.splice(index, 1);
       cartCount.innerText = cart.length;
       renderCart();
     }
-
-    // Open Sidebar
     document.getElementById("cart-icon").addEventListener("click", () => {
       cartSidebar.classList.remove("translate-x-full");
       overlayer.classList.remove("hidden");
     });
-
-    // Close Sidebar (button or overlay)
     document.getElementById("close-cart").addEventListener("click", closeCart);
     overlayer.addEventListener("click", closeCart);
 
