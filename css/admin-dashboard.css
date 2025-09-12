@@ -1,0 +1,161 @@
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "s n"
+                "s m"
+                "s f";
+        }
+        nav {
+            grid-area: n;
+            position: sticky;
+            top: 0px;
+            background: blueviolet;
+            color: white;
+            padding: 1em;
+            height: 70px;
+            z-index: 1000;
+        }
+
+        aside {
+            grid-area: s;
+            height: 100vh;
+            position: sticky;
+            top: 0px;
+            align-self: start;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            z-index: 0;
+        }
+        .sidebar-button {
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 5px;
+        }
+        .sidebar-button:hover {
+            background-color: #2563EB;
+            color: white;
+        }
+        footer {
+            grid-area: f;
+            background-color: black;
+            color: white;
+            padding: 2em;
+        }
+
+        /* Mobile (below 768px) */
+        @media (max-width: 767px) {
+            body {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto 1fr auto;
+                grid-template-areas:
+                    "n"
+                    "s"
+                    "m"
+                    "f";
+            }
+            aside {
+                position: sticky;
+                height: auto;
+                padding: 1em;
+                display: none;
+                border-radius: 8px;
+            }
+            aside.show {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+            aside p {
+                display: none;
+            }
+        }
+
+        /* Tablet size (768px to 1279px) */
+        @media (min-width: 768px) and (max-width: 1279px) {
+            body {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto 1fr auto;
+                grid-template-areas:
+                    "n"
+                    "s"
+                    "m"
+                    "f";
+            }
+            aside {
+                display: none;
+                flex-direction: row;
+                height: auto;
+                position: sticky;
+                padding: 0.5em;
+                align-items: center;
+                gap: 0.5rem;
+                border-radius: 8px;
+            }
+            aside.show {
+                display: flex;
+                justify-content: center;
+                justify-items: center;
+                gap: 20px;
+            }
+            aside p {
+                display: none;
+            }
+            .sidebar-button {
+                padding: 0.5rem;
+            }
+            .sidebar-button:hover {
+                background-color: #2563EB;
+            }
+        }
+
+        /* Extra-large size (1280px and above) */
+        @media (min-width: 1280px) {
+            body {
+                grid-template-columns: 200px 1fr;
+                grid-template-rows: auto 1fr auto;
+                grid-template-areas:
+                    "s n"
+                    "s m"
+                    "s f";
+            }
+            aside {
+                display: flex !important;
+                flex-direction: column;
+                height: 100vh;
+                position: sticky;
+                top: 0;
+                padding: 1em;
+                align-items: center;
+                justify-items: center;
+            }
+            aside #sidebar-button {
+                margin-top: 50px;
+            }
+            aside p {
+                display: block;
+            }
+
+
+            aside button {
+                width: 160px;   
+                height: 50px;   
+                display: flex;
+                align-items: center;
+                justify-content: flex-start; 
+                gap: 10px;
+                padding: 0 10px;
+            }
+        }
