@@ -160,8 +160,6 @@ let cart = [];
     const cartTotal = document.getElementById("cart-total");
     const cartSidebar = document.getElementById("cart-sidebar");
     const overlayer = document.getElementById("overlay");
-
-    // Add product to cart
     document.querySelectorAll(".add-to-cart").forEach((btn) => {
       btn.addEventListener("click", (e) => {
         const card = e.target.closest(".group");
@@ -175,8 +173,6 @@ let cart = [];
         renderCart();
       });
     });
-
-    // Render cart items
     function renderCart() {
       cartItemsContainer.innerHTML = "";
       let total = 0;
@@ -219,3 +215,26 @@ let cart = [];
       cartSidebar.classList.add("translate-x-full");
       overlayer.classList.add("hidden");
     }
+    //==================================================================
+const productCards = document.querySelectorAll('.bg-white.border.flex.flex-col.group');
+productCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const imgSrc = card.querySelector('img').src;
+    const name = card.querySelector('p').innerText;
+    const price = card.querySelector('h3').innerText;
+    const ratingStars = card.querySelector('.flex.items-center.gap-1').innerHTML;
+    const id = card.dataset.id || '12345';
+    const desc = card.dataset.desc || 'No description available.';
+    const images = JSON.parse(card.dataset.images || `["${imgSrc}"]`);
+    localStorage.setItem('productDetail', JSON.stringify({
+      imgSrc,
+      name,
+      price,
+      ratingStars,
+      id,
+      desc,
+      images
+    }));
+    window.location.href = 'product-details.html';
+  });
+});
