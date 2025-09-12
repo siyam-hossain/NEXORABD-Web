@@ -58,3 +58,70 @@ data.images.forEach(src => {
   thumb.addEventListener('click', () => mainImg.src = src);
   thumbnailsContainer.appendChild(thumb);
 });
+//=====================================================
+let cart = [];
+const cartCount = document.getElementById("cart-count");
+const cartItemsContainer = document.getElementById("cart-items");
+const cartTotal = document.getElementById("cart-total");
+const cartSidebar = document.getElementById("cart-sidebar");
+const overlayer = document.getElementById("overlay");
+const qtyInput = document.getElementById("qty");
+function updateCart() {
+  cartItemsContainer.innerHTML = "";
+  let total = 0;
+  cart.forEach((item, index) => {
+    total += item.price * item.qty;
+    const div = document.createElement("div");
+    div.classList = "flex items-center justify-between py-4 px-2 rounded shadow";
+    div.innerHTML = `
+      <div class="flex items-center gap-2">
+        <img src="${item.img}" alt="${item.name}" class="w-12 h-12 object-cover rounded">
+        <div>
+          <p class="font-semibold text-sm">${item.name}</p>
+          <p class="text-xs text-gray-600">BDT ${item.price} x ${item.qty}</p>
+        </div>
+      </div>
+      <button onclick="removeFromCart(${index})" class="text-red-500 hover:text-red-700">
+        <i class="ri-delete-bin-line"></i>
+      </button>
+    `;
+    cartItemsContainer.appendChild(div);
+  });
+  cartTotal.innerText = "BDT " + total.toLocaleString();
+  cartCount.innerText = cart.reduce((acc, item) => acc + item.qty, 0);
+}
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  updateCart();
+}
+document.querySelectorAll(".add-to-cart").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const name = document.getElementById("detail-name").innerText;
+    let priceText = document.getElementById("detail-price").innerText;
+    priceText = priceText.replace("BDT", "").replace(/,/g, "").trim();
+    const price = parseInt(priceText);
+    const img = document.getElementById("detail-img").src;
+    const qty = parseInt(qtyInput.value) || 1;
+    const existing = cart.find((item) => item.name === name);
+    if (existing) {
+      existing.qty += qty;
+    } else {
+      cart.push({ name, price, img, qty });
+    }
+
+    updateCart();
+  });
+});
+function openCart() {
+  cartSidebar.classList.remove("translate-x-full");
+  overlayer.classList.remove("hidden");
+}
+function closeCart() {
+  cartSidebar.classList.add("translate-x-full");
+  overlayer.classList.add("hidden");
+}
+document.getElementById("cart-icon").addEventListener("click", openCart);
+document.getElementById("close-cart").addEventListener("click", closeCart);
+overlayer.addEventListener("click", closeCart);
+
+
