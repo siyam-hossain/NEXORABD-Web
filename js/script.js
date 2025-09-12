@@ -216,10 +216,12 @@ let cart = [];
       overlayer.classList.add("hidden");
     }
     //==================================================================
-const productCards = document.querySelectorAll('.bg-white.border.flex.flex-col.group');
-productCards.forEach(card => {
-  card.addEventListener('click', () => {
-    const imgSrc = card.querySelector('img').src;
+
+const productImages = document.querySelectorAll('.bg-white.border img');
+productImages.forEach(img => {
+  img.addEventListener('click', (e) => {
+    const card = e.target.closest('.bg-white.border'); 
+    const imgSrc = img.src;
     const name = card.querySelector('p').innerText;
     const price = card.querySelector('h3').innerText;
     const ratingStars = card.querySelector('.flex.items-center.gap-1').innerHTML;
