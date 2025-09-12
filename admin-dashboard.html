@@ -17,7 +17,7 @@
     <style>
     </style>
 </head>
-<body class="container mx-auto bg-gray-200 gap-4">
+<body class="container mx-auto  bg-gray-200 gap-4">
     <nav class="flex justify-between items-center bg-white rounded-b-xl">
         <div class="flex items-center gap-4"> 
             <button onclick="toggleSidebar()" class="material-symbols-outlined text-black text-3xl">menu</button>
@@ -27,13 +27,22 @@
                     <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                         <span class="material-symbols-outlined text-black">search</span>
                     </div>
-                    <input 
+                    <!-- <input 
                         type="search" 
                         id="default-search" 
                         class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white sm:w-64 md:w-80 lg:w-[650px] h-12" 
                         placeholder="Search here" 
                         required 
-                    />
+                    /> -->
+                    <input 
+                        type="search" 
+                        id="default-search" 
+                        class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white 
+                                sm:max-w-xs md:max-w-md lg:max-w-2xl h-12" 
+                        placeholder="Search here" 
+                        required
+                        />
+
                     <button 
                         type="submit" 
                         class="text-black absolute end-2.5 bottom-2.5 bg-white hover:bg-blue-700 hover:text-white focus:ring-4 
@@ -85,29 +94,43 @@
     </nav>
 
     <aside id="sidebar" class="">
-        <button id="sidebar-button" class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
-            <span class="material-symbols-outlined text-3xl">dashboard</span>
-            <p class="font-semibold text-lg">Dashboard</p>
-        </button>
-        <button class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
-            <span class="material-symbols-outlined text-3xl">add_box</span>
-            <p class="font-semibold text-lg">Add</p>
-        </button>
-        <button class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
-            <span class="material-symbols-outlined text-3xl">update</span>
-            <p class="font-semibold text-lg">Update</p>
-        </button>
-        <button class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
-            <span class="material-symbols-outlined text-3xl">delete</span>
-            <p class="font-semibold text-lg">Delete</p>
-        </button>
-        <button class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
-            <span class="material-symbols-outlined text-3xl">logout</span>
-            <p class="font-semibold text-lg">Sign out</p>
-        </button>
+        <a href="admin-dashboard.html">
+            <button id="sidebar-button" class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
+                <span class="material-symbols-outlined text-3xl">dashboard</span>
+                <p class="font-semibold text-lg">Dashboard</p>
+            </button>
+        </a>
+
+        <a href="admin-dashboard-add.html">
+            <button class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
+                <span class="material-symbols-outlined text-3xl">add_box</span>
+                <p class="font-semibold text-lg">Add</p>
+            </button>
+        </a>
+
+        <a href="">
+            <button class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
+                <span class="material-symbols-outlined text-3xl">update</span>
+                <p class="font-semibold text-lg">Update</p>
+            </button>
+        </a>
+
+        <a href="">
+            <button class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
+                <span class="material-symbols-outlined text-3xl">delete</span>
+                <p class="font-semibold text-lg">Delete</p>
+            </button>
+        </a>
+
+        <a href="index.html">
+            <button class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
+                <span class="material-symbols-outlined text-3xl">logout</span>
+                <p class="font-semibold text-lg">Sign out</p>
+            </button>
+        </a>
     </aside>
 
-        <main class="grid p-2 grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-4">
+    <main class="grid p-2 grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-4">
         <!-- card 1 -->
         <div class="w-full col-span-1 border rounded-xl border-gray-300 p-5 bg-white drop-shadow-md flex flex-col">
             <div class="w-10 h-10 bg-gray-100 backdrop-blur-sm rounded-lg flex items-center justify-center border border-gray-300 drop-shadow-xl">

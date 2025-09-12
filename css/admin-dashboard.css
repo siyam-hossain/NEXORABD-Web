@@ -11,6 +11,8 @@
                 "s n"
                 "s m"
                 "s f";
+
+            overflow-x: hidden;
         }
         nav {
             grid-area: n;
