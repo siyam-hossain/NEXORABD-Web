@@ -153,3 +153,88 @@ setInterval(() => {
     slider_2.scrollBy({ left: scrollAmount_2, behavior: 'smooth' });
   }
 }, 2000);
+//======================================================
+let cart = [];
+    const cartCount = document.getElementById("cart-count");
+    const cartItemsContainer = document.getElementById("cart-items");
+    const cartTotal = document.getElementById("cart-total");
+    const cartSidebar = document.getElementById("cart-sidebar");
+    const overlayer = document.getElementById("overlay");
+    document.querySelectorAll(".add-to-cart").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const card = e.target.closest(".group");
+        const name = card.querySelector("p").innerText;
+        const priceText = card.querySelector("h3").innerText.replace("BDT: ", "");
+        const price = parseInt(priceText);
+        const img = card.querySelector("img").src;
+
+        cart.push({ name, price, img });
+        cartCount.innerText = cart.length;
+        renderCart();
+      });
+    });
+    function renderCart() {
+      cartItemsContainer.innerHTML = "";
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        total += item.price;
+
+        const div = document.createElement("div");
+        div.classList = "flex items-center justify-between py-4 px-2 rounded shadow";
+        div.innerHTML = `
+          <div class="flex items-center gap-2">
+            <img src="${item.img}" alt="${item.name}" class="w-12 h-12 object-cover rounded">
+            <div>
+              <p class="font-semibold text-sm">${item.name}</p>
+              <p class="text-xs text-gray-600">BDT ${item.price}</p>
+            </div>
+          </div>
+          <button onclick="removeFromCart(${index})" class="text-red-500 hover:text-red-700">
+            <i class="ri-delete-bin-line"></i>
+          </button>
+        `;
+        cartItemsContainer.appendChild(div);
+      });
+
+      cartTotal.innerText = "BDT " + total;
+    }
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      cartCount.innerText = cart.length;
+      renderCart();
+    }
+    document.getElementById("cart-icon").addEventListener("click", () => {
+      cartSidebar.classList.remove("translate-x-full");
+      overlayer.classList.remove("hidden");
+    });
+    document.getElementById("close-cart").addEventListener("click", closeCart);
+    overlayer.addEventListener("click", closeCart);
+
+    function closeCart() {
+      cartSidebar.classList.add("translate-x-full");
+      overlayer.classList.add("hidden");
+    }
+    //==================================================================
+const productCards = document.querySelectorAll('.bg-white.border.flex.flex-col.group');
+productCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const imgSrc = card.querySelector('img').src;
+    const name = card.querySelector('p').innerText;
+    const price = card.querySelector('h3').innerText;
+    const ratingStars = card.querySelector('.flex.items-center.gap-1').innerHTML;
+    const id = card.dataset.id || '12345';
+    const desc = card.dataset.desc || 'No description available.';
+    const images = JSON.parse(card.dataset.images || `["${imgSrc}"]`);
+    localStorage.setItem('productDetail', JSON.stringify({
+      imgSrc,
+      name,
+      price,
+      ratingStars,
+      id,
+      desc,
+      images
+    }));
+    window.location.href = 'product-details.html';
+  });
+});

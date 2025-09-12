@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXORABD</title>
+    <title>NEXORABD.COM</title>
     <!--=======================Google Font================-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,10 +53,10 @@
             <i class="ri-user-fill text-white text-3xl"></i>
             <div class="ml-2">
               <p class="text-white text-sm">Welcome to</p>
-              <a href="#" class="text-white text-sm">Admin login</a>
+              <a href="admin-dashboard.html" class="text-white text-sm">Admin login</a>
             </div>
           </div>
-          <div id="cart-icon" class=" item flex items-center">
+          <div  id="cart-icon" class="item flex items-center">
             <i class="ri-shopping-cart-line text-white text-3xl"></i>
             <div class="pl-2 flex flex-col items-center">
               <span id="cart-count" class="bg-[#E95A08] text-white text-sm font-bold px-3 rounded-full">0</span>
@@ -144,97 +144,79 @@
   </div>
   <div id="overlay" class="fixed inset-0 bg-black/50 hidden z-40"></div>
 </header>
+<!--===========================Header Part Start========================--> 
 <!--=================Header Section End===============-->
-<!--==================================================-->
-<main>
-<section id="elect-banner" class="pt-50">
-  <div class="elect-banner-content container mx-auto">
-    <h1 class="text-center">Rasel MAhmud</h1>
+<section id="product-details" class="py-40 sm:py-40">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-12">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between border-b border-gray-300 pb-5 mb-6">
+      <div class="mb-4 md:mb-0 text-center md:text-left">
+        <h2 id="detail-name" class="text-2xl sm:text-3xl font-bold mb-2">Product Title</h2>
+        <div class="flex flex-wrap items-center gap-4 text-sm sm:text-base">
+          <!-- Rating stars -->
+          <div id="detail-rating" class="flex items-center text-yellow-400 gap-x-1">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-half-fill"></i>
+            <i class="ri-star-line"></i>
+            <span class="text-gray-600 ml-2">(03 | 1 Review)</span>
+          </div>
+          <div class="flex items-center gap-1">
+            <span class="font-semibold text-black">Product ID:</span>
+            <span class="text-gray-500" id="detail-id">12345</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center md:justify-end space-x-2 sm:space-x-3">
+        <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded bg-[#011F7F] text-white"><i class="ri-facebook-fill"></i></a>
+        <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded bg-[#D4024E] text-white"><i class="ri-mail-fill"></i></a>
+        <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded bg-red-600 text-white"><i class="ri-google-fill"></i></a>
+        <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded bg-blue-500 text-white"><i class="ri-linkedin-fill"></i></a>
+        <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded bg-sky-400 text-white"><i class="ri-twitter-fill"></i></a>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+      <div class="flex flex-col sm:flex-row gap-4 items-center sm:items-start">
+        <div id="thumbnails" class="flex sm:flex-col sm:space-y-4 space-x-4 sm:space-x-0 w-full sm:w-1/4 justify-center sm:justify-start">
+        </div>
+        <div class="w-full sm:w-3/4">
+          <img id="detail-img" src="" alt="Product" class="w-full h-64 sm:h-[450px] object-contain border border-gray-200">
+        </div>
+      </div>
+      <div class="space-y-6">
+        <div class="border-b border-gray-300 pb-4">
+          <h3 class="text-2xl sm:text-3xl font-bold">Price: 
+            <span id="detail-price" class="text-[#D4024E]">BDT 1500</span>
+          </h3>
+          <p class="font-semibold">Status: <span class="text-green-600">In stock</span></p>
+        </div>
+        <p id="detail-desc" class="text-gray-800 text-sm sm:text-base">
+          Product description will appear here.
+        </p>
+        <div>
+          <h4 class="text-xl sm:text-2xl text-black font-semibold mb-2">Features:</h4>
+          <ul class="list-disc list-inside text-gray-800 space-y-1 text-sm sm:text-base">
+            <li>High-quality materials for durability</li>
+            <li>Modern and stylish design</li>
+            <li>Available in multiple colors</li>
+            <li>1-Year manufacturer warranty</li>
+            <li>Free delivery within Dhaka</li>
+          </ul>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-3 sm:space-y-0 border-t border-b mt-6 sm:mt-12 border-gray-300 py-4">
+          <input id="qty" type="number" value="1" min="1" class="border px-3 py-2 w-full sm:w-35 rounded-full text-center">
+          <button class="bg-[#D4024E] text-white px-7 py-2 font-semibold rounded-full hover:bg-[#011F7F] w-full sm:w-auto">
+            Add to cart</button>
+          <button class="bg-[#011F7F] text-white px-10 py-2 font-semibold rounded-full hover:bg-[#D4024E] w-full sm:w-auto">
+            Buy Now</button>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-<!--===============Banner Section Start=============-->
-<div id="cart-sidebar" class="fixed top-0 right-0 w-80 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-60 flex flex-col">
-    <div class="flex justify-between items-center p-4 border-b">
-      <h2 class="text-lg font-bold">🛒 Your Cart</h2>
-      <button id="close-cart" class="text-gray-600 hover:text-red-500 text-2xl">
-        <i class="ri-close-line"></i>
-      </button>
-    </div>
-    <div id="cart-items" class="flex-1 overflow-y-auto p-4 space-y-3"></div>
-    <div class="border-t p-4 flex justify-between items-center">
-      <p class="font-bold">Total: <span id="cart-total">BDT 0</span></p>
-      <button class="bg-[#011F7F] text-white px-4 py-2 rounded hover:bg-blue-500">Checkout</button>
-    </div>
-</div>
-<!--========================================================-->
-<section id="electronic-product" class="pb-8">
-    <div class="electronic-content container mx-auto">
-      <div class="heading border-b border-gray-300 mt-6">
-        <h2 class="text-black text-3xl font-bold pb-4">Electronics</h2>
-      </div>
-      <div id="slider" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
-    
-        <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/14a.jpg" alt="Laptop" class="w-full h-40 object-cover">
-          <h3 class="text-lg font-semibold mt-3">BDT: 16950</h3>
-          <p class="text-sm text-gray-600">Nyakers Gingersnaps Pom Tin</p>
-          <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
-        </div>
-
-        <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/4a.jpg" alt="Mouse" class="w-full h-40 object-cover">
-          <h3 class="text-lg font-semibold mt-3">BDT: 2500</h3>
-          <p class="text-sm text-gray-600">Wireless Mouse</p>
-          <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
-        </div>
-
-        <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/1a.jpg" alt="Keyboard" class="w-full h-40 object-cover">
-          <h3 class="text-lg font-semibold mt-3">BDT: 4500</h3>
-          <p class="text-sm text-gray-600">Mechanical Keyboard</p>
-          <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
-        </div>
-
-        <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/1a.jpg" alt="Keyboard" class="w-full h-40 object-cover">
-          <h3 class="text-lg font-semibold mt-3">BDT: 4500</h3>
-          <p class="text-sm text-gray-600">Mechanical Keyboard</p>
-          <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
-        </div>
-
-        <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/1a.jpg" alt="Keyboard" class="w-full h-40 object-cover">
-          <h3 class="text-lg font-semibold mt-3">BDT: 4500</h3>
-          <p class="text-sm text-gray-600">Mechanical Keyboard</p>
-          <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
-        </div>
-
-        <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/1a.jpg" alt="Keyboard" class="w-full h-40 object-cover">
-          <h3 class="text-lg font-semibold mt-3">BDT: 4500</h3>
-          <p class="text-sm text-gray-600">Mechanical Keyboard</p>
-          <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
-        </div>
-
-        <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/1a.jpg" alt="Keyboard" class="w-full h-40 object-cover">
-          <h3 class="text-lg font-semibold mt-3">BDT: 4500</h3>
-          <p class="text-sm text-gray-600">Mechanical Keyboard</p>
-          <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
-        </div>
-
-        <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/1a.jpg" alt="Keyboard" class="w-full h-40 object-cover">
-          <h3 class="text-lg font-semibold mt-3">BDT: 4500</h3>
-          <p class="text-sm text-gray-600">Mechanical Keyboard</p>
-          <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
-        </div>
-
-      </div>
-    </div>
-  </section>
 </main>
-<!--==================================================-->
+<!--=================Main Part End====================-->
+<!--=================Footer Part Start================-->
 <footer class="bg-[#011F7F] text-white py-10">
   <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-8">
     <div class="space-y-4">
@@ -309,26 +291,8 @@
     </div>
   </div>
 </footer>
-<!--==================================================-->
-<!--==================Main Part Start=================-->
-<main>
-   
-
-
-
-
-
-
-
-
-
-
-</main>
-  <!--=================Main Part End====================-->
-  <!--=================Footer Part Start================-->
-  
-  <!--==================Footer Part End=================-->
-  <!--==================JavaScrip Link====================-->
-  <script src="js/smartphone.js"></script>
+<!--====================Footer Part End=================-->
+<!--==================JavaScrip Link====================-->
+<script src="js/product-details.js"></script>
 </body>
 </html>
