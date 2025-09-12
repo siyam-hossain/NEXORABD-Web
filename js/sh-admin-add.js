@@ -81,7 +81,7 @@ closeModal.addEventListener("click", () => {
   alert("Save Successful");
 });
 
-// Discard → clear all fields + close modal
+
 discardBtn.addEventListener("click", () => {
   [pname, pid, pdesc, pqty, pprice, psize, pdate].forEach((el) => (el.value = ""));
   pcat.selectedIndex = 0;
