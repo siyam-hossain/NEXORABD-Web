@@ -1,299 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Admin Dashboard</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-    }
-    .container {
-      display: flex;
-      height: 100vh;
-    }
-    /* Sidebar */
-    .sidebar {
-      width: 180px;
-      background-color: white;
-      padding: 16px 8px;
-      box-shadow: 2px 0 5px rgba(0,0,0,0.05);
-      box-sizing: border-box;
-    }
-    .sidebar-menu {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .menu-label {
-      font-size: 16px;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-    .dashboard-button {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 10px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    .dashboard-button:hover {
-      background-color: #f0f0f0;
-    }
-    .dashboard-button.selected {
-      background-color: #e0e0ff;
-    }
-    .dashboard-button img {
-      width: 20px;
-      height: 20px;
-    }
-    /* Main content */
-    .main-content {
-      flex: 1;
-      background-color: #efefef;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-    }
-    /* Header (search + icons) */
-    .header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-    .search-bar {
-      flex: 1;
-      height: 36px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      padding: 0 10px;
-      font-size: 14px;
-    }
-    .header .icon {
-      width: 24px;
-      height: 24px;
-      cursor: pointer;
-    }
-    /* Content */
-    .new-product {
-      color: #3465ff;
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .content-panels {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .panel {
-      background-color: white;
-      border-radius: 6px;
-      padding: 15px;
-      flex: 1;
-      min-width: 300px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .panel h3 {
-      color: #4c4f6b;
-      font-size: 14px;
-      font-weight: bold;
-      margin: 10px 0;
-    }
-    .section {
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      padding: 10px;
-      margin-bottom: 15px;
-    }
-    .section label {
-      font-size: 14px;
-      display: block;
-      margin-bottom: 5px;
-    }
-    .field {
-      width: 100%;
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 14px;
-      box-sizing: border-box;
-    }
-    .field.combobox {
-      appearance: none;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
-      background-size: 12px;
-    }
-    .image-upload {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      padding: 5px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      cursor: pointer;
-      width: fit-content;
-    }
-    .image-upload img {
-      width: 20px;
-      height: 20px;
-    }
-    .image-preview {
-      width: 100%;
-      height: 150px;
-      background-color: #f0f0f0;
-      border-radius: 4px;
-      margin-bottom: 10px;
-    }
-    .buttons {
-      display: flex;
-      gap: 10px;
-      justify-content: flex-end;
-    }
-    .add, .discard {
-      padding: 8px 16px;
-      border: none;
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .add {
-      background-color: #3465ff;
-      color: white;
-    }
-    .discard {
-      background-color: #ccc;
-      color: #333;
-    }
-    /* Responsive */
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-      .sidebar {
-        width: 100%;
-        display: flex;
-        overflow-x: auto;
-      }
-      .content-panels {
-        flex-direction: column;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-Dashboard-ADD</title>
+    
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+    <style>
+    </style>
 </head>
-<body>
-  <div class="container">
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <div class="sidebar-menu">
-        <div class="menu-label">Menu</div>
-        <div class="dashboard-button selected">
-          <img src="https://via.placeholder.com/20?text=D" alt="Dashboard">
-          <span>Dashboard</span>
-        </div>
-        <div class="dashboard-button">
-          <img src="https://via.placeholder.com/20?text=A" alt="Add">
-          <span>Add</span>
-        </div>
-        <div class="dashboard-button">
-          <img src="https://via.placeholder.com/20?text=U" alt="Update">
-          <span>Update</span>
-        </div>
-        <div class="dashboard-button">
-          <img src="https://via.placeholder.com/20?text=D" alt="Delete">
-          <span>Delete</span>
-        </div>
-        <div class="dashboard-button">
-          <img src="https://via.placeholder.com/20?text=S" alt="Sign Out">
-          <span>Sign Out</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Main content -->
-    <div class="main-content">
-      <!-- Header -->
-      <div class="header">
-        <input type="text" class="search-bar" placeholder="Search...">
-        <img class="icon" src="https://via.placeholder.com/24?text=S" alt="Search">
-        <img class="icon" src="https://via.placeholder.com/24?text=N" alt="Notification">
-        <img class="icon" src="https://via.placeholder.com/24?text=U" alt="User">
-      </div>
-
-      <div class="new-product">New Product</div>
-      <div class="content-panels">
-        <!-- Left Panel -->
-        <div class="panel">
-          <h3>Description</h3>
-          <div class="section">
-            <label for="pname">Product Name</label>
-            <input id="pname" type="text" class="field" placeholder="Enter product name">
-            <label for="pid">Product ID</label>
-            <input id="pid" type="text" class="field" placeholder="Enter product ID">
-            <label for="pdesc">Product Description</label>
-            <textarea id="pdesc" class="field" rows="4" placeholder="Enter product description"></textarea>
-          </div>
-          <h3>Category</h3>
-          <div class="section">
-            <label for="pcat">Product Category</label>
-            <select id="pcat" class="field combobox">
-              <option>Select category</option>
-            </select>
-          </div>
-          <h3>Quantity</h3>
-          <div class="section">
-            <label for="pqty">Product Quantity</label>
-            <input id="pqty" type="text" class="field" placeholder="Enter quantity">
-          </div>
+<body class="container mx-auto bg-gray-200 gap-4">
+    <nav class="flex justify-between items-center bg-white rounded-b-xl">
+        <div class="flex items-center gap-4"> 
+            <button onclick="toggleSidebar()" class="material-symbols-outlined text-black text-3xl">menu</button>
+            <form class="">   
+                <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
+                <div class="relative flex items-center">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <span class="material-symbols-outlined text-black">search</span>
+                    </div>
+                    <input 
+                        type="search" 
+                        id="default-search" 
+                        class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white sm:w-64 md:w-80 lg:w-[650px] h-12" 
+                        placeholder="Search here" 
+                        required 
+                    />
+                    <button 
+                        type="submit" 
+                        class="text-black absolute end-2.5 bottom-2.5 bg-white hover:bg-blue-700 hover:text-white focus:ring-4 
+                            focus:outline-none focus:ring-blue-300 border border-gray-300 font-medium rounded-md text-sm px-4 h-7">
+                        Search
+                    </button>
+                </div>
+            </form>
         </div>
 
-        <!-- Right Panel -->
-        <div class="panel">
-          <h3>Product Image</h3>
-          <div class="section">
-            <div class="image-preview"></div>
-            <div class="image-upload">
-              <img src="https://via.placeholder.com/20?text=U" alt="Upload">
-              <span>Add Image</span>
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full hover:bg-purple-200 flex items-center justify-center">
+                <span class="material-symbols-outlined text-black text-3xl">notifications</span>
             </div>
-          </div>
-          <h3>Pricing</h3>
-          <div class="section">
-            <label for="pprice">Product Price</label>
-            <input id="pprice" type="text" class="field" placeholder="Enter price">
-          </div>
-          <h3>Size</h3>
-          <div class="section">
-            <label for="psize">Product Size | Weight | Quantity</label>
-            <input id="psize" type="text" class="field" placeholder="Enter size/weight/quantity">
-          </div>
-          <h3>Date</h3>
-          <div class="section">
-            <label for="pdate">Date</label>
-            <input id="pdate" type="date" class="field">
-          </div>
-          <div class="buttons">
-            <button class="discard">Discard</button>
-            <button class="add">Add Product</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+            <img src="images/sh-profile.jpg" alt="Profile.jpg" class="w-10 h-10 rounded-full">
 
-  <script>
-    document.querySelectorAll('.dashboard-button').forEach(button => {
-      button.addEventListener('click', () => {
-        document.querySelectorAll('.dashboard-button').forEach(btn => btn.classList.remove('selected'));
-        button.classList.add('selected');
-      });
-    });
-  </script>
+            <button data-popover-target="popover-default" type="button" class="font-semibold text-black">Cartesian</button>
+            
+            <div data-popover id="popover-default" 
+                role="tooltip" 
+                class="absolute invisible inline-block w-64 text-sm text-black transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0">
+                <div class="px-3 py-2">
+                    <h3 class="font-semibold text-black">Cartesian</h3>
+                    <h2 class="text-gray-400">cartesian@gmail.com</h2>
+                </div>
+                
+                <div class="px-3 py-2">
+                    <button class="flex items-center w-full gap-3 p-2 pb-2 text-gray-700 hover:bg-blue-600 hover:rounded-xl hover:text-white">
+                        <span class="material-symbols-outlined">account_circle</span>
+                        <p class="font-semibold">Edit Profile</p>
+                    </button>
+                    <button class="flex items-center w-full gap-3 p-2 pb-2 text-gray-700 hover:bg-blue-600 hover:rounded-xl hover:text-white">
+                        <span class="material-symbols-outlined">Settings</span>
+                        <p class="font-semibold">Accounts Settings</p>
+                    </button>
+                    <button class="flex items-center w-full gap-3 p-2 pb-2 text-gray-700 hover:bg-blue-600 hover:rounded-xl hover:text-white">
+                        <span class="material-symbols-outlined">support_agent</span>
+                        <p class="font-semibold">Support</p>
+                    </button>
+                    <hr>
+                    <button class="flex items-center w-full gap-3 p-2 pb-2 text-gray-700 hover:bg-red-600 hover:rounded-xl hover:text-white">
+                        <span class="material-symbols-outlined">logout</span>
+                        <p class="font-semibold">Sign out</p>
+                    </button>
+                </div>
+                <div data-popper-arrow></div>
+            </div>
+        </div>
+    </nav>
+
+    <aside id="sidebar" class="">
+        <a href="admin-dashboard.html">
+            <button id="sidebar-button" class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
+                <span class="material-symbols-outlined text-3xl">dashboard</span>
+                <p class="font-semibold text-lg">Dashboard</p>
+            </button>
+        </a>
+
+        <a href="admin-dashboard-add.html">
+            <button class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
+                <span class="material-symbols-outlined text-3xl">add_box</span>
+                <p class="font-semibold text-lg">Add</p>
+            </button>
+        </a>
+
+        <a href="">
+            <button class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
+                <span class="material-symbols-outlined text-3xl">update</span>
+                <p class="font-semibold text-lg">Update</p>
+            </button>
+        </a>
+
+        <a href="">
+            <button class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
+                <span class="material-symbols-outlined text-3xl">delete</span>
+                <p class="font-semibold text-lg">Delete</p>
+            </button>
+        </a>
+
+        <a href="index.html">
+            <button class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
+                <span class="material-symbols-outlined text-3xl">logout</span>
+                <p class="font-semibold text-lg">Sign out</p>
+            </button>
+        </a>
+    </aside>
+
+    
+    <main class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-4">
+      <span class="col-span-1 lg:col-span-2 xl:col-span-2 2xl:col-span-4 font-bold px-2 text-blue-500 text-2xl">Add Product</span>
+      <!-- Left Panel -->
+      <div class="2xl:col-span-2 bg-white p-4 rounded-xl shadow-md">
+
+          <div class="flex flex-col gap-4">
+              <h3 class="text-lg font-semibold text-gray-700">Description</h3>
+              <div class="flex flex-col gap-2">
+              <label for="pname" class="text-sm font-medium text-gray-600">Product Name</label>
+              <input id="pname" type="text" placeholder="Enter product name"
+                      class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+              
+              <label for="pid" class="text-sm font-medium text-gray-600">Product ID</label>
+              <input id="pid" type="text" placeholder="Enter product ID"
+                      class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+              
+              <label for="pdesc" class="text-sm font-medium text-gray-600">Product Description</label>
+              <textarea id="pdesc" rows="4" placeholder="Enter product description"
+                          class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+              </div>
+      
+              <h3 class="text-lg font-semibold text-gray-700">Category</h3>
+              <div class="flex flex-col gap-2">
+              <label for="pcat" class="text-sm font-medium text-gray-600">Product Category</label>
+              <select id="pcat" class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                  <option>Select category</option>
+                  <option>Electronics</option>
+                  <option>Clothings</option>
+                  <option>Vihicles</option>
+                  <option>Smartphone</option>
+                  <option>Home & Kitchen</option>
+                  <option>Accessories</option>
+                  <option>Fruits</option>
+                  <option>Foods</option>
+              </select>
+              </div>
+      
+              <h3 class="text-lg font-semibold text-gray-700">Quantity</h3>
+              <div class="flex flex-col gap-2">
+              <label for="pqty" class="text-sm font-medium text-gray-600">Product Quantity</label>
+              <input id="pqty" type="text" placeholder="Enter quantity"
+                      class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+              </div>
+          </div>
+
+
+
+
+      </div>
+
+      <!-- Right Panel -->
+      <div class="2xl:col-span-2 bg-white p-4 rounded-xl shadow-md">
+
+          <div class="flex flex-col gap-4">
+              <h3 class="text-lg font-semibold text-gray-700">Product Image</h3>
+
+              <div class="flex flex-col items-center gap-3">
+                  
+                  <div id="preview-container" class="w-40 h-40 bg-gray-100 border border-dashed drop-shadow-xl border-gray-400 rounded-lg flex items-center justify-center overflow-hidden">
+                      <span id="preview-text" class="text-gray-400">Preview</span>
+                      <img id="preview-image" src="" alt="Preview" class="hidden w-full h-full object-cover">
+                  </div>
+
+                  <button id="addImageBtn" type="button" class="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg text-gray-600 hover:bg-blue-500 hover:text-white">
+                      <span class="material-symbols-outlined">upload</span>
+                      <span class="font-semibold">Add Image</span>
+                  </button>
+                  <input type="file" id="imageInput" accept="image/*" class="hidden" />
+              </div>
+      
+              <h3 class="text-lg font-semibold text-gray-700">Pricing</h3>
+              <div class="flex flex-col gap-2">
+              <label for="pprice" class="text-sm font-medium text-gray-600">Product Price</label>
+              <input id="pprice" type="text" placeholder="Enter price"
+                      class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+              </div>
+      
+              <h3 class="text-lg font-semibold text-gray-700">Size</h3>
+              <div class="flex flex-col gap-2">
+              <label for="psize" class="text-sm font-medium text-gray-600">Product Size | Weight | Quantity</label>
+              <input id="psize" type="text" placeholder="Enter size/weight/quantity"
+                      class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+              </div>
+      
+              <h3 class="text-lg font-semibold text-gray-700">Date</h3>
+              <div class="flex flex-col gap-2">
+              <label for="pdate" class="text-sm font-medium text-gray-600">Date</label>
+              <input id="pdate" type="date"
+                      class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+              </div>
+      
+              <div class="flex justify-end gap-3">
+              <button id="discardBtn" class="px-4 py-2 border border-gray-400 rounded-lg text-gray-600 hover:bg-red-600 hover:text-white hover:border-red-600">Discard</button>
+              <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Add Product</button>
+              </div>
+          </div>
+      </div>
+
+      <!-- Modal -->
+      <div id="productModal" tabindex="-1" aria-hidden="true" class="fixed inset-0 z-50 hidden w-full h-full bg-black/50 items-center justify-center">
+          <div class="bg-white rounded-xl shadow-lg w-11/12 max-w-2xl p-6">
+              <h2 class="text-xl font-semibold text-gray-800 mb-4">Product Added Successfully</h2>
+
+              <!-- Product details -->
+              <div class="flex flex-col md:flex-row gap-6">
+                  <!-- Image preview -->
+                  <div class="flex-shrink-0 w-40 h-40 border rounded-lg overflow-hidden flex items-center justify-center">
+                  <img id="modalImage" src="" alt="Product Image" class="w-full h-full object-cover">
+                  </div>
+
+                  <!-- Details -->
+                  <div class="flex flex-col gap-2 text-gray-700">
+                  <p><span class="font-semibold">Name:</span> <span id="modalName"></span></p>
+                  <p><span class="font-semibold">ID:</span> <span id="modalId"></span></p>
+                  <p><span class="font-semibold">Description:</span> <span id="modalDesc"></span></p>
+                  <p><span class="font-semibold">Category:</span> <span id="modalCat"></span></p>
+                  <p><span class="font-semibold">Quantity:</span> <span id="modalQty"></span></p>
+                  <p><span class="font-semibold">Price:</span> $<span id="modalPrice"></span></p>
+                  <p><span class="font-semibold">Size:</span> <span id="modalSize"></span></p>
+                  <p><span class="font-semibold">Date:</span> <span id="modalDate"></span></p>
+                  </div>
+              </div>
+
+              <!-- Buttons -->
+              <div class="flex justify-end gap-3 mt-6">
+                  <button id="discardBtn" class="px-4 py-2 border border-gray-400 rounded-lg text-gray-600 hover:bg-red-600 hover:text-white">Discard</button>
+                  <button id="closeModal" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Close</button>
+              </div>
+          </div>
+      </div>
+
+    </main>
+
+    <footer class="rounded-t-xl"></footer>
+
+    <script src="js/sh-admin-add.js"></script>
 </body>
 </html>
