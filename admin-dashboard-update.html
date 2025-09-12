@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin-Dashboard-ADD</title>
+    <title>Admin-Dashboard-Update</title>
     
     <link rel="stylesheet" href="css/admin-dashboard.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
@@ -120,7 +120,7 @@
 
     
     <main class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-4">
-      <span class="col-span-1 lg:col-span-2 xl:col-span-2 2xl:col-span-4 font-bold px-2 text-blue-500 text-2xl">Add Product</span>
+      <span class="col-span-1 lg:col-span-2 xl:col-span-2 2xl:col-span-4 font-bold px-2 text-blue-500 text-2xl">Update Product</span>
       <!-- Left Panel -->
       <div class="2xl:col-span-2 bg-white p-4 rounded-xl shadow-md">
 
@@ -177,7 +177,7 @@
 
               <div class="flex flex-col items-center gap-3">
                   
-                  <div id="preview-container" class="w-40 h-40 bg-gray-100 border border-dashed drop-shadow-xl border-gray-400 rounded-lg flex items-center justify-center overflow-hidden">
+                  <div id="preview-container" class="w-96 h-96 lg:w-40 lg:h-40 xl:w-40 xl:h-40 2xl:w-40 2xl:h-40 bg-gray-100 border border-dashed drop-shadow-xl border-gray-400 rounded-lg flex items-center justify-center overflow-hidden">
                       <span id="preview-text" class="text-gray-400">Preview</span>
                       <img id="preview-image" src="" alt="Preview" class="hidden w-full h-full object-cover">
                   </div>
@@ -207,12 +207,12 @@
               <div class="flex flex-col gap-2">
               <label for="pdate" class="text-sm font-medium text-gray-600">Date</label>
               <input id="pdate" type="date"
-                      class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
               </div>
       
               <div class="flex justify-end gap-3">
               <button id="discardBtn" class="px-4 py-2 border border-gray-400 rounded-lg text-gray-600 hover:bg-red-600 hover:text-white hover:border-red-600">Discard</button>
-              <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Add Product</button>
+              <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Update Product</button>
               </div>
           </div>
       </div>
