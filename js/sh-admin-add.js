@@ -92,4 +92,14 @@ discardBtn.addEventListener("click", () => {
   modal.classList.add("hidden");
   modal.classList.remove("flex"); 
 });
+Delete.addEventListener("click", () => {
+  [pname, pid, pdesc, pqty, pprice, psize, pdate].forEach((el) => (el.value = ""));
+  pcat.selectedIndex = 0;
+  previewImage.src = "";
+  previewImage.classList.add("hidden");
+  previewText.classList.remove("hidden");
+
+  modal.classList.add("hidden");
+  modal.classList.remove("flex"); 
+});
 
