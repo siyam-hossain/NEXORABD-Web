@@ -109,3 +109,27 @@ menuItems.forEach(item => {
     currentIndex = (currentIndex + 1) % totalSlides;
     showSlide(currentIndex);
   }, 3000);
+// =================================================
+const productImages = document.querySelectorAll('.bg-white.border img');
+productImages.forEach(img => {
+  img.addEventListener('click', (e) => {
+    const card = e.target.closest('.bg-white.border'); 
+    const imgSrc = img.src;
+    const name = card.querySelector('p').innerText;
+    const price = card.querySelector('h3').innerText;
+    const ratingStars = card.querySelector('.flex.items-center.gap-1').innerHTML;
+    const id = card.dataset.id || '12345';
+    const desc = card.dataset.desc || 'No description available.';
+    const images = JSON.parse(card.dataset.images || `["${imgSrc}"]`);
+    localStorage.setItem('productDetail', JSON.stringify({
+      imgSrc,
+      name,
+      price,
+      ratingStars,
+      id,
+      desc,
+      images
+    }));
+    window.location.href = 'product-details.html';
+  });
+});

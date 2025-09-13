@@ -56,15 +56,13 @@
               <a href="admin-dashboard.html" class="text-white text-sm">Admin login</a>
             </div>
           </div>
-
-           <div  id="cart-icon" class="item flex items-center">
+          <div  id="cart-icon" class="item flex items-center">
             <i class="ri-shopping-cart-line text-white text-3xl"></i>
             <div class="pl-2 flex flex-col items-center">
               <span id="cart-count" class="bg-yellow-400 text-white text-sm font-bold px-3 rounded-full">0</span>
               <p class="text-white text-sm">Cart</p>
             </div>
           </div>
-
         </div>
         <div class="sm:hidden flex items-center gap-4">
           <div class="flex items-center relative">
@@ -146,87 +144,171 @@
   </div>
   <div id="overlay" class="fixed inset-0 bg-black/50 hidden z-40"></div>
 </header>
-<!--===========================Header Part Start========================--> 
+<!--===============Header Part Start==================--> 
 <!--=================Header Section End===============-->
-<section id="product-details" class="py-40 sm:py-40">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-12">
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between border-b border-gray-300 pb-5 mb-6">
-      <div class="mb-4 md:mb-0 text-center md:text-left">
-        <h2 id="detail-name" class="text-2xl sm:text-3xl font-bold mb-2">Product Title</h2>
-        <div class="flex flex-wrap items-center gap-4 text-sm sm:text-base">
-          <div id="detail-rating" class="flex items-center text-yellow-400 gap-x-1">
-            <i class="ri-star-fill"></i>
-            <i class="ri-star-fill"></i>
-            <i class="ri-star-fill"></i>
-            <i class="ri-star-half-fill"></i>
-            <i class="ri-star-line"></i>
-            <span class="text-gray-600 ml-2">(03 | 1 Review)</span>
-          </div>
-          <div class="flex items-center gap-1">
-            <span class="font-semibold text-black">Product ID:</span>
-            <span class="text-gray-500" id="detail-id">12345</span>
-          </div>
-        </div>
-      </div>
-      <div class="flex justify-center md:justify-end space-x-2 sm:space-x-3">
-        <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded bg-[#011F7F] text-white"><i class="ri-facebook-fill"></i></a>
-        <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded bg-[#D4024E] text-white"><i class="ri-mail-fill"></i></a>
-        <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded bg-red-600 text-white"><i class="ri-google-fill"></i></a>
-        <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded bg-blue-500 text-white"><i class="ri-linkedin-fill"></i></a>
-        <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded bg-sky-400 text-white"><i class="ri-twitter-fill"></i></a>
-      </div>
+<!--==================Main Part Start=================-->
+<main>
+<section id="pyment-method-banner">
+  <div id="elect-banner" class="relative w-full h-[300px] sm:h-[380px] overflow-hidden">
+    <div id="slides-container" class="absolute top-0 left-0 flex w-full h-full transition-transform duration-500 ease-in-out">
+      <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/bn1.jpg');"></div>
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
-      <div class="flex flex-col sm:flex-row gap-4 items-center sm:items-start">
-        <div id="thumbnails" class="flex sm:flex-col sm:space-y-4 space-x-4 sm:space-x-0 w-full sm:w-1/4 justify-center sm:justify-start">
+    <div class="absolute top-0 left-0 w-full h-full bg-black/80 z-20"></div>
+    <div class="relative z-30 mt-10 w-full h-full flex flex-col items-center justify-center text-center px-4 sm:px-6">
+      <h1 class="text-white text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 uppercase">Checkout</h1>
+    </div>
+  </div>
+</section>
+<section id="payment-method" class="bg-gray-50 py-8 sm:py-12">
+  <div class="container mx-auto px-4 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+      <div class="lg:col-span-2 bg-white shadow-xl rounded-[5px] p-6 sm:p-8 border border-gray-300">
+        <p class="text-sm text-gray-500 mb-4 sm:mb-6 flex flex-wrap items-center gap-1 sm:gap-2">
+          <span class="text-blue-600 font-medium">Cart</span> 
+          <i class="ri-arrow-right-s-line"></i> 
+          <span class="text-blue-600 font-medium">Shipping</span> 
+          <i class="ri-arrow-right-s-line"></i> 
+          <span class="font-semibold text-gray-700">Payment</span>
+        </p>
+        <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">Shipping Address</h2>
+        <form class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+          <input type="text" placeholder="First Name*" class="border border-gray-300 p-2 sm:p-3 w-full outline-none rounded-[5px] text-sm sm:text-base">
+          <input type="text" placeholder="Last Name*" class="border border-gray-300 p-2 sm:p-3 w-full outline-none rounded-[5px] text-sm sm:text-base">
+          <input type="email" placeholder="Email*" class="border border-gray-300 p-2 sm:p-3 w-full outline-none rounded-[5px] text-sm sm:text-base">
+          <div class="flex flex-col sm:flex-row gap-2">
+            <select class="border border-gray-300 p-2 sm:p-3 text-gray-600 outline-none rounded-[5px] text-sm sm:text-base">
+              <option>BD</option>
+              <option>IND</option>
+              <option>US</option>
+            </select>
+            <input type="text" placeholder="+880 123456789" class="border border-gray-300 p-2 sm:p-3 flex-1 outline-none rounded-[5px] text-sm sm:text-base">
+          </div>
+          <input type="text" placeholder="City*" class="border border-gray-300 p-2 sm:p-3 w-full outline-none rounded-[5px] text-sm sm:text-base">
+          <input type="text" placeholder="State*" class="border border-gray-300 p-2 sm:p-3 w-full outline-none rounded-[5px] text-sm sm:text-base">
+          <input type="text" placeholder="Zip Code*" class="border border-gray-300 p-2 sm:p-3 w-full outline-none md:col-span-2 rounded-[5px] text-sm sm:text-base">
+          <textarea placeholder="Address (Street, Area, etc.)*" class="border border-gray-300 p-2 sm:p-3 w-full outline-none md:col-span-2 rounded-[5px] text-sm sm:text-base"></textarea>
+        </form>
+        <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mt-8 sm:mt-10 mb-4 sm:mb-6">Shipping Method</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5">
+          <label class="group relative flex flex-col border border-gray-300 p-4 sm:p-5 cursor-pointer hover:shadow-md transition rounded-[5px]">
+            <input type="radio" name="shipping" value="0" class="peer hidden" checked>
+            <div class="flex items-start justify-between w-full">
+              <div class="flex items-center gap-2 sm:gap-3">
+                <span class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-blue-50 text-blue-600 group-hover:bg-blue-100 rounded-full">
+                  <i class="ri-truck-line text-lg sm:text-xl"></i>
+                </span>
+                <div>
+                  <p class="font-semibold text-gray-800 text-sm sm:text-base">Free Shipping</p>
+                  <p class="text-xs sm:text-sm text-gray-500">7–20 Days</p>
+                </div>
+              </div>
+              <span class="font-semibold text-gray-800 text-sm sm:text-base">$0</span>
+            </div>
+          </label>
+          <label class="group relative flex flex-col border border-gray-300 p-4 sm:p-5 cursor-pointer hover:shadow-md transition rounded-[5px]">
+            <input type="radio" name="shipping" value="9" class="peer hidden">
+            <div class="flex items-start justify-between w-full">
+              <div class="flex items-center gap-2 sm:gap-3">
+                <span class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-orange-50 text-orange-600 group-hover:bg-orange-100 rounded-full">
+                  <i class="ri-flashlight-line text-lg sm:text-xl -rotate-12"></i>
+                </span>
+                <div>
+                  <p class="font-semibold text-gray-800 text-sm sm:text-base">Express Shipping</p>
+                  <p class="text-xs sm:text-sm text-gray-500">1–3 Days</p>
+                </div>
+              </div>
+              <span class="font-semibold text-gray-800 text-sm sm:text-base">$9</span>
+            </div>
+          </label>
         </div>
-        <div class="w-full sm:w-3/4">
-          <img id="detail-img" src="" alt="Product" class="w-full h-64 sm:h-[450px] object-contain border border-gray-200">
+        <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mt-8 sm:mt-10 mb-4 sm:mb-6">Payment Method</h2>
+        <div class="space-y-3 sm:space-y-5">
+          <label class="flex items-center justify-between border border-gray-300 p-4 sm:p-5 cursor-pointer hover:shadow-md transition rounded-[5px]">
+            <div class="flex items-center gap-2 sm:gap-3">
+              <input type="radio" name="payment" class="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" checked>
+              <div>
+                <p class="font-semibold text-gray-800 text-sm sm:text-base">Online Payment</p>
+                <p class="text-xs sm:text-sm text-gray-500">Visa, MasterCard, bKash, Nagad, Rocket</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-1 sm:gap-2 justify-end">
+              <img src="images/visa.png" alt="Visa" class="h-3 sm:h-4 md:h-6">
+              <img src="images/mtc.png" alt="MasterCard" class="h-3 sm:h-4 md:h-6">
+              <img src="images/bksh.png" alt="bKash" class="h-3 sm:h-4 md:h-6">
+              <img src="images/rkt.png" alt="Nagad" class="h-3 sm:h-4 md:h-6">
+              <img src="images/mtb.png" alt="Rocket" class="h-3 sm:h-4 md:h-6">
+            </div>
+          </label>
+          <label class="flex items-center border border-gray-300 p-4 sm:p-5 cursor-pointer hover:shadow-md transition rounded-[5px]">
+            <input type="radio" name="payment" class="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 text-blue-600">
+            <div>
+              <p class="font-semibold text-gray-800 text-sm sm:text-base">Cash on Delivery</p>
+              <p class="text-xs sm:text-sm text-gray-500">Pay when you receive the product</p>
+            </div>
+          </label>
         </div>
       </div>
-      <div class="space-y-6">
-        <div class="border-b border-gray-300 pb-4">
-           <h3 class="text-3xl font-bold mb-2">Price: <span id="detail-price" class="text-red-600">1500</span></h3>
-          <p class="font-semibold">Status: <span class="text-green-600">In stock</span></p>
+      <div class="bg-white shadow-xl rounded-[5px] p-6 sm:p-8 border border-gray-300">
+        <h2 class="text-lg sm:text-xl font-bold text-gray-800 mb-3 sm:mb-4">Your Cart</h2>
+        <div class="flex flex-col gap-3 sm:gap-5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2 sm:space-x-3">
+              <img src="images/ip1.jpg" class="w-10 h-10 sm:w-12 sm:h-12 rounded-[5px]" alt="Product">
+              <div>
+                <p class="font-medium text-gray-800 text-sm sm:text-base">Men Top Black Jacket</p>
+                <p class="text-xs sm:text-sm text-gray-500">Men’s Black</p>
+              </div>
+            </div>
+            <p class="text-gray-800 font-semibold text-sm sm:text-base">BDT: 999.00</p>
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2 sm:space-x-3">
+              <img src="images/mb1.jpg" class="w-10 h-10 sm:w-12 sm:h-12 rounded-[5px]" alt="Product">
+              <div>
+                <p class="font-medium text-gray-800 text-sm sm:text-base">Women Jacket</p>
+                <p class="text-xs sm:text-sm text-gray-500">Women Top</p>
+              </div>
+            </div>
+            <p class="text-gray-800 font-semibold text-sm sm:text-base">BDT: 1200.00</p>
+          </div>
         </div>
-        <p id="detail-desc" class="text-gray-800 text-sm sm:text-base">
-          Product description will appear here.
-        </p>
-        <div>
-          <h4 class="text-xl sm:text-2xl text-black font-semibold mb-2">Features:</h4>
-          <ul class="list-disc list-inside text-gray-800 space-y-1 text-sm sm:text-base">
-            <li>High-quality materials for durability</li>
-            <li>Modern and stylish design</li>
-            <li>Available in multiple colors</li>
-            <li>1-Year manufacturer warranty</li>
-            <li>Free delivery within Dhaka</li>
-          </ul>
+        <div class="flex flex-col  sm:flex-row items-center gap-2 mt-4  sm:mt-4 mb-4 sm:mb-5">
+          <input type="text" placeholder="Discount code" class="border border-gray-300 p-2 flex-1 w-full outline-none rounded-[5px] text-sm sm:text-base">
+          <button class="bg-yellow-400 text-black px-4 py-2 font-semibold hover:text-white rounded-[5px] w-full sm:w-auto">Apply</button>
         </div>
-        <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-3 sm:space-y-0 border-t border-b mt-4 sm:mt-10 border-gray-300 py-4">
-          <input id="qty" type="number" value="1" min="1" class="border px-3 py-2 w-full sm:w-35 rounded-full text-center">
-          <button class=" add-to-cart bg-[#D4024E] text-white px-7 py-2 font-semibold rounded-full hover:bg-[#011F7F] w-full sm:w-auto">
-            Add to cart</button>
-          <a href="payment.html"><button class="bg-[#011F7F] text-white px-10 py-2 font-semibold rounded-full hover:bg-[#D4024E] w-full sm:w-auto">
-          Buy Now</button></a>
+        <div class="space-y-1 sm:space-y-2 text-gray-600 text-sm sm:text-base">
+          <div class="flex justify-between"><span>Subtotal</span><span>BDT: 2199.00</span></div>
+          <div class="flex justify-between"><span>Shipping</span><span>BDT: 9.00</span></div>
+          <div class="flex justify-between"><span>Estimated taxes</span><span>BDT: 5.00</span></div>
+          <div class="flex justify-between font-bold text-gray-900 text-base sm:text-lg pt-2 border-t border-gray-300">
+            <span>Total</span><span>BDT: 2213.00</span>
+          </div>
         </div>
+        <button id="confirmBtn" class="mt-4 sm:mt-6 w-full text-lg sm:text-xl cursor-pointer bg-yellow-400 hover:text-white text-black font-semibold py-2 sm:py-3 flex items-center justify-center gap-2 transition rounded-[5px]">
+          Confirm & Pay <i class="ri-arrow-right-line"></i>
+        </button>
       </div>
     </div>
   </div>
 </section>
-<div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
-<div id="cart-sidebar" class="fixed top-0 right-0 w-80 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-60 flex flex-col">
-    <div class="flex justify-between items-center p-4 border-b">
-      <h2 class="text-lg font-bold"><i class="ri-shopping-cart-line text-black text-xl"></i> Your Cart</h2>
-      <button id="close-cart" class="text-gray-600 hover:text-red-500 text-2xl">
-        <i class="ri-close-line"></i>
-      </button>
+
+
+<!--===============================================-->
+<section id="alret-box">
+<div id="alertBox" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
+  <div id="alertContent" class="bg-white rounded-[10px] p-6 w-80 text-center shadow-lg">
+    <div id="loader" class="flex flex-col items-center gap-4">
+      <div class="w-12 h-12 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin"></div>
+      <p class="text-gray-700">Processing your order...</p>
     </div>
-    <div id="cart-items" class="flex-1 overflow-y-auto p-4 space-y-3"></div>
-    <div class="border-t p-4 flex justify-between items-center">
-      <p class="font-bold">Total: <span id="cart-total">BDT 0</span></p>
-      <button class="bg-[#011F7F] text-white px-4 py-2 rounded hover:bg-[#D4024E]">Checkout</button>
+    <div id="success" class="hidden flex flex-col items-center gap-4">
+      <h3 class="text-xl font-bold text-green-600 mb-2">Success!</h3>
+      <p class="text-gray-700">Your order has been placed successfully.</p>
+      <button id="closeAlert" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-[5px] font-semibold transition">OK</button>
     </div>
+  </div>
 </div>
+</section>
 </main>
 <!--=================Main Part End====================-->
 <!--=================Footer Part Start================-->
@@ -306,6 +388,6 @@
 </footer>
 <!--====================Footer Part End=================-->
 <!--==================JavaScrip Link====================-->
-<script src="js/product-details.js"></script>
+<script src="js/paymet.js"></script>
 </body>
 </html>

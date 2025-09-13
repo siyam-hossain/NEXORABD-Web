@@ -182,7 +182,7 @@
     <div id="cart-items" class="flex-1 overflow-y-auto p-4 space-y-3"></div>
     <div class="border-t p-4 flex justify-between items-center">
       <p class="font-bold">Total: <span id="cart-total">BDT 0</span></p>
-      <button class="bg-[#011F7F] text-white px-4 py-2 rounded hover:bg-blue-500">Checkout</button>
+      <a href="payment.html"><button class="bg-[#011F7F] text-white px-4 py-2 rounded hover:bg-[#D4024E]">Checkout</button></a>
     </div>
 </div>
 <!--========================================================-->
@@ -191,55 +191,168 @@
       <div class="heading border-b border-gray-300 mt-6">
         <h2 class="text-black text-3xl font-bold pb-4">Electronics</h2>
       </div>
-      <div id="slider" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
-        <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/14a.jpg" alt="Laptop" class="w-full h-50 object-cover">
-          <h3 class="text-lg font-semibold mt-3">BDT: 16950</h3>
-          <p class="text-sm text-gray-600">Nyakers Gingersnaps Pom Tin</p>
-          <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
+      <div id="slider" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6"> 
+        <div class="bg-white border border-gray-200 hover:border-gray-400 cursor-pointer p-4 relative flex flex-col group" 
+          data-id="67899" data-desc="Tasty Chocolate Cookies with rich cocoa flavor. Great for parties."
+          data-images='["images/4a.jpg","images/14a.jpg","images/24a.jpg"]'>
+        <div class="relative">
+          <img src="images/4a.jpg" alt="Gingersnaps" class="w-full h-50">
         </div>
-        <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/4a.jpg" alt="Mouse" class="w-full h-50 object-cover">
-          <h3 class="text-lg font-semibold mt-3">BDT: 2500</h3>
-          <p class="text-sm text-gray-600">Wireless Mouse</p>
-          <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
+        <h3 class="text-lg font-semibold mt-3">BDT: 16950</h3>
+        <p class="text-sm text-gray-600">Nyakers Gingersnaps Pom Tin</p>
+        <div class="flex items-center gap-1 text-yellow-400 text-base font-bold mt-2">
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <span class="text-black text-xs ml-1">01</span>
         </div>
-        <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/1a.jpg" alt="Keyboard" class="w-full h-50 object-cover">
-          <h3 class="text-lg font-semibold mt-3">BDT: 4500</h3>
-          <p class="text-sm text-gray-600">Mechanical Keyboard</p>
-          <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
+        <div class="mt-4">
+          <button class="add-to-cart mt-3 w-full bg-[#011F7F]  text-white py-2 rounded-md hover:bg-blue-500 z-10 relative">Add to cart</button>
         </div>
-        <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/1a.jpg" alt="Keyboard" class="w-full h-50 object-cover">
-          <h3 class="text-lg font-semibold mt-3">BDT: 4500</h3>
-          <p class="text-sm text-gray-600">Mechanical Keyboard</p>
-          <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
+      </div>
+      <div class="bg-white border border-gray-200 hover:border-gray-400 cursor-pointer p-4 relative flex flex-col group" 
+          data-id="67810" data-desc="Tasty Chocolate Cookies with rich cocoa flavor. Great for parties."
+          data-images='["images/1a.jpg","images/14a.jpg","images/24a.jpg"]'>
+        <div class="relative">
+          <img src="images/1a.jpg" alt="Gingersnaps" class="w-full h-50">
         </div>
-        <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/1a.jpg" alt="Keyboard" class="w-full h-50 object-cover">
-          <h3 class="text-lg font-semibold mt-3">BDT: 4500</h3>
-          <p class="text-sm text-gray-600">Mechanical Keyboard</p>
-          <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
+        <h3 class="text-lg font-semibold mt-3">BDT: 16950</h3>
+        <p class="text-sm text-gray-600">Nyakers Gingersnaps Pom Tin</p>
+        <div class="flex items-center gap-1 text-yellow-400 text-base font-bold mt-2">
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <span class="text-black text-xs ml-1">01</span>
         </div>
-        <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/1a.jpg" alt="Keyboard" class="w-full h-50 object-cover">
-          <h3 class="text-lg font-semibold mt-3">BDT: 4500</h3>
-          <p class="text-sm text-gray-600">Mechanical Keyboard</p>
-          <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
+        <div class="mt-4">
+          <button class="add-to-cart mt-3 w-full bg-[#011F7F]  text-white py-2 rounded-md hover:bg-blue-500 z-10 relative">Add to cart</button>
         </div>
-        <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/1a.jpg" alt="Keyboard" class="w-full h-50 object-cover">
-          <h3 class="text-lg font-semibold mt-3">BDT: 4500</h3>
-          <p class="text-sm text-gray-600">Mechanical Keyboard</p>
-          <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
+      </div>
+          
+      <div class="bg-white border border-gray-200 hover:border-gray-400 cursor-pointer p-4 relative flex flex-col group" 
+          data-id="67811" data-desc="Tasty Chocolate Cookies with rich cocoa flavor. Great for parties."
+          data-images='["images/5a.jpg","images/14a.jpg","images/24a.jpg"]'>
+        <div class="relative">
+          <img src="images/5a.jpg" alt="Gingersnaps" class="w-full h-50">
         </div>
-        <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/1a.jpg" alt="Keyboard" class="w-full h-50 object-cover">
-          <h3 class="text-lg font-semibold mt-3">BDT: 4500</h3>
-          <p class="text-sm text-gray-600">Mechanical Keyboard</p>
-          <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
+        <h3 class="text-lg font-semibold mt-3">BDT: 16950</h3>
+        <p class="text-sm text-gray-600">Nyakers Gingersnaps Pom Tin</p>
+        <div class="flex items-center gap-1 text-yellow-400 text-base font-bold mt-2">
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <span class="text-black text-xs ml-1">01</span>
         </div>
+        <div class="mt-4">
+          <button class="add-to-cart mt-3 w-full bg-[#011F7F]  text-white py-2 rounded-md hover:bg-blue-500 z-10 relative">Add to cart</button>
+        </div>
+      </div>
+          <div class="bg-white border border-gray-200 hover:border-gray-400 cursor-pointer p-4 relative flex flex-col group" 
+          data-id="67812" data-desc="Tasty Chocolate Cookies with rich cocoa flavor. Great for parties."
+          data-images='["images/4a.jpg","images/14a.jpg","images/24a.jpg"]'>
+        <div class="relative">
+          <img src="images/4a.jpg" alt="Gingersnaps" class="w-full h-50">
+        </div>
+        <h3 class="text-lg font-semibold mt-3">BDT: 16950</h3>
+        <p class="text-sm text-gray-600">Nyakers Gingersnaps Pom Tin</p>
+        <div class="flex items-center gap-1 text-yellow-400 text-base font-bold mt-2">
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <span class="text-black text-xs ml-1">01</span>
+        </div>
+        <div class="mt-4">
+          <button class="add-to-cart mt-3 w-full bg-[#011F7F]  text-white py-2 rounded-md hover:bg-blue-500 z-10 relative">Add to cart</button>
+        </div>
+      </div>
+          <div class="bg-white border border-gray-200 hover:border-gray-400 cursor-pointer p-4 relative flex flex-col group" 
+          data-id="67813" data-desc="Tasty Chocolate Cookies with rich cocoa flavor. Great for parties."
+          data-images='["images/19a.jpg","images/14a.jpg","images/24a.jpg"]'>
+        <div class="relative">
+          <img src="images/19a.jpg" alt="Gingersnaps" class="w-full h-50">
+        </div>
+        <h3 class="text-lg font-semibold mt-3">BDT: 16950</h3>
+        <p class="text-sm text-gray-600">Nyakers Gingersnaps Pom Tin</p>
+        <div class="flex items-center gap-1 text-yellow-400 text-base font-bold mt-2">
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <span class="text-black text-xs ml-1">01</span>
+        </div>
+        <div class="mt-4">
+          <button class="add-to-cart mt-3 w-full bg-[#011F7F]  text-white py-2 rounded-md hover:bg-blue-500 z-10 relative">Add to cart</button>
+        </div>
+      </div>
+          <div class="bg-white border border-gray-200 hover:border-gray-400 cursor-pointer p-4 relative flex flex-col group" 
+          data-id="67814" data-desc="Tasty Chocolate Cookies with rich cocoa flavor. Great for parties."
+          data-images='["images/24a.jpg","images/14a.jpg","images/24a.jpg"]'>
+        <div class="relative">
+          <img src="images/24a.jpg" alt="Gingersnaps" class="w-full h-50">
+        </div>
+        <h3 class="text-lg font-semibold mt-3">BDT: 16950</h3>
+        <p class="text-sm text-gray-600">Nyakers Gingersnaps Pom Tin</p>
+        <div class="flex items-center gap-1 text-yellow-400 text-base font-bold mt-2">
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <span class="text-black text-xs ml-1">01</span>
+        </div>
+        <div class="mt-4">
+          <button class="add-to-cart mt-3 w-full bg-[#011F7F]  text-white py-2 rounded-md hover:bg-blue-500 z-10 relative">Add to cart</button>
+        </div>
+      </div>
+          <div class="bg-white border border-gray-200 hover:border-gray-400 cursor-pointer p-4 relative flex flex-col group" 
+          data-id="67815" data-desc="Tasty Chocolate Cookies with rich cocoa flavor. Great for parties."
+          data-images='["images/18a.jpg","images/14a.jpg","images/24a.jpg"]'>
+        <div class="relative">
+          <img src="images/18a.jpg" alt="Gingersnaps" class="w-full h-50">
+        </div>
+        <h3 class="text-lg font-semibold mt-3">BDT: 16950</h3>
+        <p class="text-sm text-gray-600">Nyakers Gingersnaps Pom Tin</p>
+        <div class="flex items-center gap-1 text-yellow-400 text-base font-bold mt-2">
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <span class="text-black text-xs ml-1">01</span>
+        </div>
+        <div class="mt-4">
+          <button class="add-to-cart mt-3 w-full bg-[#011F7F]  text-white py-2 rounded-md hover:bg-blue-500 z-10 relative">Add to cart</button>
+        </div>
+      </div>
+          <div class="bg-white border border-gray-200 hover:border-gray-400 cursor-pointer p-4 relative flex flex-col group" 
+          data-id="67816" data-desc="Tasty Chocolate Cookies with rich cocoa flavor. Great for parties."
+          data-images='["images/14a.jpg","images/14a.jpg","images/24a.jpg"]'>
+        <div class="relative">
+          <img src="images/14a.jpg" alt="Gingersnaps" class="w-full h-50">
+        </div>
+        <h3 class="text-lg font-semibold mt-3">BDT: 16950</h3>
+        <p class="text-sm text-gray-600">Nyakers Gingersnaps Pom Tin</p>
+        <div class="flex items-center gap-1 text-yellow-400 text-base font-bold mt-2">
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <span class="text-black text-xs ml-1">01</span>
+        </div>
+        <div class="mt-4">
+          <button class="add-to-cart mt-3 w-full bg-[#011F7F]  text-white py-2 rounded-md hover:bg-blue-500 z-10 relative">Add to cart</button>
+        </div>
+      </div>
       </div>
     </div>
   </section>
