@@ -59,7 +59,7 @@
           <div id="cart-icon" class=" item flex items-center">
             <i class="ri-shopping-cart-line text-white text-3xl"></i>
             <div class="pl-2 flex flex-col items-center">
-              <span id="cart-count" class="bg-[#E95A08] text-white text-sm font-bold px-3 rounded-full">0</span>
+              <span id="cart-count" class="bg-yellow-400 text-white text-sm font-bold px-3 rounded-full">0</span>
               <p class="text-white text-sm">Cart</p>
             </div>
           </div>
@@ -67,7 +67,7 @@
         <div class="sm:hidden flex items-center gap-4">
           <div class="flex items-center relative">
             <i class="ri-shopping-cart-line text-white text-3xl"></i>
-            <span class="absolute -top-2 -right-2 bg-[#E95A08] text-white text-xs font-bold px-2 rounded-full">0</span>
+            <span class="absolute -top-2 -right-2 bg-yellow-400 text-white text-xs font-bold px-2 rounded-full">0</span>
           </div>
           <button class="text-white text-3xl" id="mobileMenuBtn">
             <i class="ri-menu-line"></i>
@@ -120,7 +120,7 @@
         </li>
       </ul>
       <div class="hidden sm:flex items-center font-semibold">
-        <i class="ri-phone-fill mr-2 text-[#E95A08]"></i> Hot Line : +88002255444
+        <i class="ri-phone-fill mr-2 text-yellow-400"></i> Hot Line : +88002255444
       </div>
     </div>
   </div>
@@ -147,10 +147,28 @@
 <!--=================Header Section End===============-->
 <!--==================================================-->
 <main>
-<section id="elect-banner" class="pt-50">
-  <div class="elect-banner-content container mx-auto">
-    <h1 class="text-center">Rasel MAhmud</h1>
+<section id="elect-banner" class="relative w-full h-[650px] overflow-hidden">
+  <div id="slides-container" class="absolute top-0 left-0 flex w-full h-full transition-transform duration-500 ease-in-out">
+    <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/mb1.jpg');"></div>
+    <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/mb2.jpg');"></div>
+    <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/mb3.jpg');"></div>
+    <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/mb4.jpg');"></div>
   </div>
+  <div class="absolute top-0 left-0 w-full h-full bg-black/80 z-20"></div>
+  <div class="relative z-30 mt-10 w-full h-full flex flex-col items-center justify-center text-center px-6">
+    <h1 class="text-white text-5xl md:text-6xl font-extrabold mb-4">New <span class="text-yellow-400">Smartphone</span></h1>
+    <p class="text-white/90 text-lg md:text-xl mb-6 max-w-xl">
+      Discover the latest gadgets and Smartphone at unbeatable prices. Shop now and upgrade your lifestyle.
+    </p>
+     <a href="#shop-now" class="bg-yellow-400 text-black hover:text-white hover:bg-[#011F7F] font-bold py-4 px-10 rounded-lg transition-colors duration-300">
+    Shop Now</a>
+  </div>
+  <button id="prev-slide" class="absolute top-1/2 -translate-y-1/2 left-4 bg-white/30 hover:bg-white text-black w-12 h-12 rounded-full flex items-center justify-center text-3xl z-30 transition-colors duration-300">
+    <i class="ri-arrow-left-s-line"></i>
+  </button>
+  <button id="next-slide" class="absolute top-1/2 -translate-y-1/2 right-4 bg-white/30 hover:bg-white text-black w-12 h-12 rounded-full flex items-center justify-center text-3xl z-30 transition-colors duration-300">
+    <i class="ri-arrow-right-s-line"></i>
+  </button>
 </section>
 <!--===============Banner Section Start=============-->
 <div id="cart-sidebar" class="fixed top-0 right-0 w-80 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-60 flex flex-col">
@@ -173,63 +191,54 @@
         <h2 class="text-black text-3xl font-bold pb-4">Electronics</h2>
       </div>
       <div id="slider" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
-    
         <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/14a.jpg" alt="Laptop" class="w-full h-40 object-cover">
+          <img src="images/ip1.jpg" alt="Laptop" class="w-full h-50 object-cover">
           <h3 class="text-lg font-semibold mt-3">BDT: 16950</h3>
           <p class="text-sm text-gray-600">Nyakers Gingersnaps Pom Tin</p>
           <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
         </div>
-
         <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/4a.jpg" alt="Mouse" class="w-full h-40 object-cover">
+          <img src="images/ip2.jpg" alt="Mouse" class="w-full h-50 object-cover">
           <h3 class="text-lg font-semibold mt-3">BDT: 2500</h3>
           <p class="text-sm text-gray-600">Wireless Mouse</p>
           <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
         </div>
-
         <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/1a.jpg" alt="Keyboard" class="w-full h-40 object-cover">
+          <img src="images/ip3.jpg" alt="Keyboard" class="w-full h-50 object-cover">
           <h3 class="text-lg font-semibold mt-3">BDT: 4500</h3>
           <p class="text-sm text-gray-600">Mechanical Keyboard</p>
           <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
         </div>
-
         <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/1a.jpg" alt="Keyboard" class="w-full h-40 object-cover">
+          <img src="images/ip1.jpg" alt="Keyboard" class="w-full h-50 object-cover">
           <h3 class="text-lg font-semibold mt-3">BDT: 4500</h3>
           <p class="text-sm text-gray-600">Mechanical Keyboard</p>
           <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
         </div>
-
         <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/1a.jpg" alt="Keyboard" class="w-full h-40 object-cover">
+          <img src="images/ip2.jpg" alt="Keyboard" class="w-full h-50 object-cover">
           <h3 class="text-lg font-semibold mt-3">BDT: 4500</h3>
           <p class="text-sm text-gray-600">Mechanical Keyboard</p>
           <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
         </div>
-
         <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/1a.jpg" alt="Keyboard" class="w-full h-40 object-cover">
+          <img src="images/ip1.jpg" alt="Keyboard" class="w-full h-50 object-cover">
           <h3 class="text-lg font-semibold mt-3">BDT: 4500</h3>
           <p class="text-sm text-gray-600">Mechanical Keyboard</p>
           <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
         </div>
-
         <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/1a.jpg" alt="Keyboard" class="w-full h-40 object-cover">
+          <img src="images/ip2.jpg" alt="Keyboard" class="w-full h-50 object-cover">
           <h3 class="text-lg font-semibold mt-3">BDT: 4500</h3>
           <p class="text-sm text-gray-600">Mechanical Keyboard</p>
           <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
         </div>
-
         <div class="bg-white border border-gray-200 p-4 relative flex flex-col group">
-          <img src="images/1a.jpg" alt="Keyboard" class="w-full h-40 object-cover">
+          <img src="images/ip3.jpg" alt="Keyboard" class="w-full h-50 object-cover">
           <h3 class="text-lg font-semibold mt-3">BDT: 4500</h3>
           <p class="text-sm text-gray-600">Mechanical Keyboard</p>
           <button class="add-to-cart mt-3 w-full bg-[#011F7F] text-white py-2 rounded-md hover:bg-blue-500">Add to cart</button>
         </div>
-
       </div>
     </div>
   </section>
@@ -310,25 +319,7 @@
   </div>
 </footer>
 <!--==================================================-->
-<!--==================Main Part Start=================-->
-<main>
-   
-
-
-
-
-
-
-
-
-
-
-</main>
-  <!--=================Main Part End====================-->
-  <!--=================Footer Part Start================-->
-  
-  <!--==================Footer Part End=================-->
-  <!--==================JavaScrip Link====================-->
+<!--==================JavaScrip Link====================-->
   <script src="js/smartphone.js"></script>
 </body>
 </html>

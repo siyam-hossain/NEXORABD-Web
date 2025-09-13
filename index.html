@@ -59,7 +59,7 @@
           <div  id="cart-icon" class="item flex items-center">
             <i class="ri-shopping-cart-line text-white text-3xl"></i>
             <div class="pl-2 flex flex-col items-center">
-              <span id="cart-count" class="bg-[#E95A08] text-white text-sm font-bold px-3 rounded-full">0</span>
+              <span id="cart-count" class="bg-yellow-400 text-white text-sm font-bold px-3 rounded-full">0</span>
               <p class="text-white text-sm">Cart</p>
             </div>
           </div>
@@ -67,7 +67,7 @@
         <div class="sm:hidden flex items-center gap-4">
           <div class="flex items-center relative">
             <i class="ri-shopping-cart-line text-white text-3xl"></i>
-            <span class="absolute -top-2 -right-2 bg-[#E95A08] text-white text-xs font-bold px-2 rounded-full">0</span>
+            <span class="absolute -top-2 -right-2 bg-yellow-400 text-white text-xs font-bold px-2 rounded-full">0</span>
           </div>
           <button class="text-white text-3xl" id="mobileMenuBtn">
             <i class="ri-menu-line"></i>
@@ -120,7 +120,7 @@
         </li>
       </ul>
       <div class="hidden sm:flex items-center font-semibold">
-        <i class="ri-phone-fill mr-2 text-[#E95A08]"></i> Hot Line : +88002255444
+        <i class="ri-phone-fill mr-2 text-yellow-400"></i> Hot Line : +88002255444
       </div>
     </div>
   </div>
@@ -221,18 +221,24 @@
         </div>
   </div>
   <!--============== Banner Middle Part==============-->
-  <div class="banner-middle-part w-full sm:w-4/6 order-2 sm:order-2 relative overflow-hidden">
-  <div class="flex justify-center pb-4">
-    <div class="relative w-full max-w-[800px] h-[250px] overflow-hidden ">
-    <div id="slides-container" class="flex h-full transition-transform duration-500 ease-in-out">
-      <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/banner-1.png');"></div>
-      <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/banner-2.png');"></div>
-      <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/banner-3.png');"></div>
-    </div>
-    <button id="prev-slide"class="absolute top-1/2 -translate-y-1/2 left-2 sm:left-4 bg-transparent hover:bg-[#011F7F] text-black hover:text-white w-12 h-12 rounded-full flex items-center justify-center text-4xl z-50 transition-colors duration-300">
-    <i class="ri-arrow-left-s-line"></i></button>
-    <button id="next-slide"class="absolute top-1/2 -translate-y-1/2 right-2 sm:right-4 bg-transparent hover:bg-[#011F7F] text-black hover:text-white w-12 h-12 rounded-full flex items-center justify-center text-4xl z-50transition-colors duration-300">
-    <i class="ri-arrow-right-s-line"></i></button>
+<div class="banner-middle-part w-full sm:w-4/6 order-2 sm:order-2 relative overflow-hidden">
+    <div class="flex justify-center pb-4">
+    <div class="relative w-full max-w-[800px] h-[250px] overflow-hidden">
+      <div id="slides-container" class="flex h-full transition-transform duration-500 ease-in-out">
+        <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/bn1.jpg');"></div>
+        <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/mb3.jpg');"></div>
+        <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/bn2.jpg');"></div>
+      </div>
+      <div class="absolute top-0 left-0 w-full h-full bg-black/70 z-20"></div>
+      <div class="absolute top-0 left-0 w-full h-full z-30 flex flex-col items-center justify-center text-center px-4">
+        <h1 class="text-white text-3xl md:text-4xl uppercase font-bold">Welcome <span class="text-yellow-400"> to NexoraBD</span></h1>
+      </div>>
+      <button id="prev-slide" class="absolute top-1/2 -translate-y-1/2 left-2 sm:left-4 bg-transparent hover:bg-[#011F7F] text-black hover:text-white w-12 h-12 rounded-full flex items-center justify-center text-4xl z-40 transition-colors duration-300">
+        <i class="ri-arrow-left-s-line"></i>
+      </button>
+      <button id="next-slide" class="absolute top-1/2 -translate-y-1/2 right-2 sm:right-4 bg-transparent hover:bg-[#011F7F] text-black hover:text-white w-12 h-12 rounded-full flex items-center justify-center text-4xl z-40 transition-colors duration-300">
+        <i class="ri-arrow-right-s-line"></i>
+      </button>
     </div>
     </div>
     <div class="product-items grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -1071,7 +1077,7 @@
 <section class="py-20 bg-gray-50">
   <div class="container mx-auto px-6">
     <div class="text-center mb-16">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Latest from Our Blog</h2>
+      <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900">Latest from Our Blog</h2>
       <p class="mt-3 text-gray-600 text-sm sm:text-base">Stay updated with shopping tips, style guides, and product news</p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
