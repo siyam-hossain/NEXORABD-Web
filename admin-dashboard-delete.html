@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin-panel-delete</title>
+    
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+</head>
+<body class="container mx-auto  bg-[#181818] gap-4">
+    <nav class="flex justify-between items-center bg-[#262626] rounded-b-xl">
+        <div class="flex items-center gap-4"> 
+            <button onclick="toggleSidebar()" class="material-symbols-outlined text-white text-3xl">menu</button>
+            <form class="">   
+                <label for="default-search" class="mb-2 text-sm font-medium text-green-400 sr-only">Search</label>
+                <div class="relative flex items-center">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <span class="material-symbols-outlined text-gray-400">search</span>
+                    </div>
+                    <input 
+                        type="search" 
+                        id="default-search" 
+                        class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-600 rounded-lg bg-[#181818] sm:w-64 md:w-80 lg:w-[650px] h-12" 
+                        placeholder="Search here" 
+                        required 
+                    />
+                    <button 
+                        type="submit" 
+                        class="text-white absolute end-2.5 bottom-2.5 bg-[#262626] hover:bg-blue-700 hover:text-white focus:ring-4 
+                            focus:outline-none focus:ring-blue-300 border border-gray-600 font-medium rounded-md text-sm px-4 h-7">
+                        Search
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <div class="relative w-8 h-8 rounded-full hover:bg-purple-200 flex items-center justify-center">
+                <!-- Bell icon -->
+                <span class="material-symbols-outlined text-white text-3xl hover:text-black">
+                    notifications
+                </span>
+        
+                <!-- Green dot (absolute top-right) -->
+                <span class="animate-pulse absolute top-1 right-1 w-3 h-3 bg-green-600 rounded-full border border-gray-800"></span>
+            </div>
+
+            <img src="images/sh-profile.jpg" alt="Profile.jpg" class="w-10 h-10 rounded-full ring-2 ring-cyan-400">
+
+            <button data-popover-target="popover-default" type="button" class="font-semibold text-white">Cartesian</button>
+            
+            <div data-popover id="popover-default" role="tooltip"
+                class="absolute invisible w-64 text-sm text-black transition-opacity duration-300 bg-[#262626] border border-gray-200 rounded-lg shadow-xs opacity-0 flex flex-col items-center">
+            
+                <!-- Centered image -->
+                <img src="images/sh-profile.jpg" class="w-32 h-32 rounded-full mt-3" alt="">
+            
+                <!-- Left-aligned text -->
+                <div class="w-full px-3 py-2 flex flex-col justify-center items-center">
+                    <div class="flex">
+                        <h3 class="font-semibold text-white">Cartesian</h3>
+                        <div class="animate-pulse w-2 h-2 bg-green-500 rounded-full"></div>
+                    </div>
+                    <h2 class="text-gray-400">cartesian@gmail.com</h2>
+                </div>
+            
+                <!-- Left-aligned buttons -->
+                <div class="w-full px-3 py-2 flex flex-col gap-1">
+                    <button
+                        class="flex items-center w-full gap-3 p-2 text-gray-400 hover:bg-blue-600 hover:rounded-xl hover:text-white">
+                        <span class="material-symbols-outlined">account_circle</span>
+                        <p class="font-semibold">Edit Profile</p>
+                    </button>
+                    <button
+                        class="flex items-center w-full gap-3 p-2 text-gray-400 hover:bg-blue-600 hover:rounded-xl hover:text-white">
+                        <span class="material-symbols-outlined">Settings</span>
+                        <p class="font-semibold">Account Settings</p>
+                    </button>
+                    <button
+                        class="flex items-center w-full gap-3 p-2 text-gray-400 hover:bg-blue-600 hover:rounded-xl hover:text-white">
+                        <span class="material-symbols-outlined">support_agent</span>
+                        <p class="font-semibold">Support</p>
+                    </button>
+                    <hr class="my-1 border-gray-700">
+                    <button
+                        class="flex items-center w-full gap-3 p-2 text-gray-400 hover:bg-red-600 hover:rounded-xl hover:text-white">
+                        <span class="material-symbols-outlined">logout</span>
+                        <p class="font-semibold">Sign out</p>
+                    </button>
+                </div>
+            
+                <div data-popper-arrow></div>
+            </div>
+        </div>
+    </nav>
+
+    <aside id="sidebar" class="">
+        <a href="admin-dashboard.html">
+            <button id="sidebar-button" class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
+                <span class="material-symbols-outlined text-3xl">dashboard</span>
+                <p class="font-semibold text-lg">Dashboard</p>
+            </button>
+        </a>
+
+        <a href="admin-dashboard-add.html">
+            <button class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
+                <span class="material-symbols-outlined text-3xl">add_box</span>
+                <p class="font-semibold text-lg">Add</p>
+            </button>
+        </a>
+
+        <a href="admin-dashboard-update.html">
+            <button class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
+                <span class="material-symbols-outlined text-3xl">update</span>
+                <p class="font-semibold text-lg">Update</p>
+            </button>
+        </a>
+
+        <a href="admin-dashboard-delete.html">
+            <button class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
+                <span class="material-symbols-outlined text-3xl">delete</span>
+                <p class="font-semibold text-lg">Delete</p>
+            </button>
+        </a>
+
+        <a href="index.html">
+            <button class="flex items-center gap-2 p-1 text-gray-500 hover:bg-blue-600 hover:rounded-lg hover:text-white">
+                <span class="material-symbols-outlined text-3xl">logout</span>
+                <p class="font-semibold text-lg">Sign out</p>
+            </button>
+        </a>
+    </aside>
+
+    <main class="flex flex-col gap-2">
+
+
+      <span class="animate-pulse font-bold px-2 text-red-500 text-2xl">Delete Product</span>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-1">
+            <section class="col-span-1 lg:col-span-2 xl:col-span-2 2xl:col-span-4 border rounded-xl border-gray-900 bg-[#262626] drop-shadow-md flex flex-col shadow-lg p-5 gap-5">
+                <h3 class="text-xl md:text-2xl lg:text-2xl font-bold text-gray-300 text-left">Inventory</h3>
+                <div class="overflow-auto border-2 rounded-xl border-[#181818]">
+                    <table class="w-full table-fixed border-[#181818]">
+                        <thead class="bg-[#181818] text-green-400">
+                            <tr>
+                                <th class="w-52 p-3 text-sm font-bold tracking-wide text-left">Product</th>
+                                <th class="w-32 p-3 text-sm font-bold tracking-wide text-left">Category</th>
+                                <th class="w-64 p-3 text-sm font-bold tracking-wide text-left">Description</th>
+                                <th class="w-32 p-3 text-sm font-bold tracking-wide text-left">Brand</th>
+                                <th class="w-24 p-3 text-sm font-bold tracking-wide text-left">Price</th>
+                                <th class="w-24 p-3 text-sm font-bold tracking-wide text-left">Stock</th>
+                                <th class="w-24 p-3 text-sm font-bold tracking-wide text-left"></th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="bg-[#262626] divide-y-2 divide-[#181818] text-gray-500 font-bold">
+                            
+                            <tr class="p-3">
+                                <td class="p-3 text-sm text-orange-400 whitespace-nowrap flex justify-start items-center gap-2">
+                                    <img class="w-12 h-12 rounded-full border-2 border-gray-600" src="images/apple 27.jpg" alt="">
+                                    <span>Apple iMac 27"</span>
+                                </td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                </td>
+                                <td class="p-3 text-sm text-violet-300 truncate" title="High-performance all-in-one desktop PC suitable for professional and creative tasks.">
+                                    High-performance all-in-one desktop PC suitable for professional and creative tasks.
+                                </td>
+                                <td class="p-3 text-sm text-blue-400 whitespace-nowrap">Apple</td>
+                                <td class="p-3 text-sm text-rose-500 whitespace-nowrap">$2,299</td>
+                                <td class="p-3 text-sm text-teal-500 whitespace-nowrap">95</td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-red-600 cursor-pointer delete-btn">delete</span>
+                                </td>
+                            </tr>
+                            <tr class="p-3">
+                                <td class="p-3 text-sm text-orange-400 whitespace-nowrap flex justify-start items-center gap-2">
+                                    <img class="w-12 h-12 rounded-full border-2 border-gray-600" src="images/apple 27.jpg" alt="">
+                                    <span>Apple iMac 27"</span>
+                                </td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                </td>
+                                <td class="p-3 text-sm text-violet-300 truncate" title="High-performance all-in-one desktop PC suitable for professional and creative tasks.">
+                                    High-performance all-in-one desktop PC suitable for professional and creative tasks.
+                                </td>
+                                <td class="p-3 text-sm text-blue-400 whitespace-nowrap">Apple</td>
+                                <td class="p-3 text-sm text-rose-500 whitespace-nowrap">$2,299</td>
+                                <td class="p-3 text-sm text-teal-500 whitespace-nowrap">95</td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-red-600 cursor-pointer delete-btn">delete</span>
+                                </td>
+                            </tr>
+                            <tr class="p-3">
+                                <td class="p-3 text-sm text-orange-400 whitespace-nowrap flex justify-start items-center gap-2">
+                                    <img class="w-12 h-12 rounded-full border-2 border-gray-600" src="images/apple 27.jpg" alt="">
+                                    <span>Apple iMac 27"</span>
+                                </td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                </td>
+                                <td class="p-3 text-sm text-violet-300 truncate" title="High-performance all-in-one desktop PC suitable for professional and creative tasks.">
+                                    High-performance all-in-one desktop PC suitable for professional and creative tasks.
+                                </td>
+                                <td class="p-3 text-sm text-blue-400 whitespace-nowrap">Apple</td>
+                                <td class="p-3 text-sm text-rose-500 whitespace-nowrap">$2,299</td>
+                                <td class="p-3 text-sm text-teal-500 whitespace-nowrap">95</td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-red-600 cursor-pointer delete-btn">delete</span>
+                                </td>
+                            </tr>
+                            <tr class="p-3">
+                                <td class="p-3 text-sm text-orange-400 whitespace-nowrap flex justify-start items-center gap-2">
+                                    <img class="w-12 h-12 rounded-full border-2 border-gray-600" src="images/apple 27.jpg" alt="">
+                                    <span>Apple iMac 27"</span>
+                                </td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                </td>
+                                <td class="p-3 text-sm text-violet-300 truncate" title="High-performance all-in-one desktop PC suitable for professional and creative tasks.">
+                                    High-performance all-in-one desktop PC suitable for professional and creative tasks.
+                                </td>
+                                <td class="p-3 text-sm text-blue-400 whitespace-nowrap">Apple</td>
+                                <td class="p-3 text-sm text-rose-500 whitespace-nowrap">$2,299</td>
+                                <td class="p-3 text-sm text-teal-500 whitespace-nowrap">95</td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-red-600 cursor-pointer delete-btn">delete</span>
+                                </td>
+                            </tr>
+                            <tr class="p-3">
+                                <td class="p-3 text-sm text-orange-400 whitespace-nowrap flex justify-start items-center gap-2">
+                                    <img class="w-12 h-12 rounded-full border-2 border-gray-600" src="images/apple 27.jpg" alt="">
+                                    <span>Apple iMac 27"</span>
+                                </td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                </td>
+                                <td class="p-3 text-sm text-violet-300 truncate" title="High-performance all-in-one desktop PC suitable for professional and creative tasks.">
+                                    High-performance all-in-one desktop PC suitable for professional and creative tasks.
+                                </td>
+                                <td class="p-3 text-sm text-blue-400 whitespace-nowrap">Apple</td>
+                                <td class="p-3 text-sm text-rose-500 whitespace-nowrap">$2,299</td>
+                                <td class="p-3 text-sm text-teal-500 whitespace-nowrap">95</td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-red-600 cursor-pointer delete-btn">delete</span>
+                                </td>
+                            </tr>
+                            <tr class="p-3">
+                                <td class="p-3 text-sm text-orange-400 whitespace-nowrap flex justify-start items-center gap-2">
+                                    <img class="w-12 h-12 rounded-full border-2 border-gray-600" src="images/apple 27.jpg" alt="">
+                                    <span>Apple iMac 27"</span>
+                                </td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                </td>
+                                <td class="p-3 text-sm text-violet-300 truncate" title="High-performance all-in-one desktop PC suitable for professional and creative tasks.">
+                                    High-performance all-in-one desktop PC suitable for professional and creative tasks.
+                                </td>
+                                <td class="p-3 text-sm text-blue-400 whitespace-nowrap">Apple</td>
+                                <td class="p-3 text-sm text-rose-500 whitespace-nowrap">$2,299</td>
+                                <td class="p-3 text-sm text-teal-500 whitespace-nowrap">95</td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-red-600 cursor-pointer delete-btn">delete</span>
+                                </td>
+                            </tr>
+                            <tr class="p-3">
+                                <td class="p-3 text-sm text-orange-400 whitespace-nowrap flex justify-start items-center gap-2">
+                                    <img class="w-12 h-12 rounded-full border-2 border-gray-600" src="images/apple 27.jpg" alt="">
+                                    <span>Apple iMac 27"</span>
+                                </td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                </td>
+                                <td class="p-3 text-sm text-violet-300 truncate" title="High-performance all-in-one desktop PC suitable for professional and creative tasks.">
+                                    High-performance all-in-one desktop PC suitable for professional and creative tasks.
+                                </td>
+                                <td class="p-3 text-sm text-blue-400 whitespace-nowrap">Apple</td>
+                                <td class="p-3 text-sm text-rose-500 whitespace-nowrap">$2,299</td>
+                                <td class="p-3 text-sm text-teal-500 whitespace-nowrap">95</td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-red-600 cursor-pointer delete-btn">delete</span>
+                                </td>
+                            </tr>
+                            <tr class="p-3">
+                                <td class="p-3 text-sm text-orange-400 whitespace-nowrap flex justify-start items-center gap-2">
+                                    <img class="w-12 h-12 rounded-full border-2 border-gray-600" src="images/apple 27.jpg" alt="">
+                                    <span>Apple iMac 27"</span>
+                                </td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                </td>
+                                <td class="p-3 text-sm text-violet-300 truncate" title="High-performance all-in-one desktop PC suitable for professional and creative tasks.">
+                                    High-performance all-in-one desktop PC suitable for professional and creative tasks.
+                                </td>
+                                <td class="p-3 text-sm text-blue-400 whitespace-nowrap">Apple</td>
+                                <td class="p-3 text-sm text-rose-500 whitespace-nowrap">$2,299</td>
+                                <td class="p-3 text-sm text-teal-500 whitespace-nowrap">95</td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-red-600 cursor-pointer delete-btn">delete</span>
+                                </td>
+                            </tr>
+                            <tr class="p-3">
+                                <td class="p-3 text-sm text-orange-400 whitespace-nowrap flex justify-start items-center gap-2">
+                                    <img class="w-12 h-12 rounded-full border-2 border-gray-600" src="images/apple 27.jpg" alt="">
+                                    <span>Apple iMac 27"</span>
+                                </td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                </td>
+                                <td class="p-3 text-sm text-violet-300 truncate" title="High-performance all-in-one desktop PC suitable for professional and creative tasks.">
+                                    High-performance all-in-one desktop PC suitable for professional and creative tasks.
+                                </td>
+                                <td class="p-3 text-sm text-blue-400 whitespace-nowrap">Apple</td>
+                                <td class="p-3 text-sm text-rose-500 whitespace-nowrap">$2,299</td>
+                                <td class="p-3 text-sm text-teal-500 whitespace-nowrap">95</td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-red-600 cursor-pointer delete-btn">delete</span>
+                                </td>
+                            </tr>
+                            <tr class="p-3">
+                                <td class="p-3 text-sm text-orange-400 whitespace-nowrap flex justify-start items-center gap-2">
+                                    <img class="w-12 h-12 rounded-full border-2 border-gray-600" src="images/apple 27.jpg" alt="">
+                                    <span>Apple iMac 27"</span>
+                                </td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                </td>
+                                <td class="p-3 text-sm text-violet-300 truncate" title="High-performance all-in-one desktop PC suitable for professional and creative tasks.">
+                                    High-performance all-in-one desktop PC suitable for professional and creative tasks.
+                                </td>
+                                <td class="p-3 text-sm text-blue-400 whitespace-nowrap">Apple</td>
+                                <td class="p-3 text-sm text-rose-500 whitespace-nowrap">$2,299</td>
+                                <td class="p-3 text-sm text-teal-500 whitespace-nowrap">95</td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-red-600 cursor-pointer delete-btn">delete</span>
+                                </td>
+                            </tr>
+                            <tr class="p-3">
+                                <td class="p-3 text-sm text-orange-400 whitespace-nowrap flex justify-start items-center gap-2">
+                                    <img class="w-12 h-12 rounded-full border-2 border-gray-600" src="images/apple 27.jpg" alt="">
+                                    <span>Apple iMac 27"</span>
+                                </td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                </td>
+                                <td class="p-3 text-sm text-violet-300 truncate" title="High-performance all-in-one desktop PC suitable for professional and creative tasks.">
+                                    High-performance all-in-one desktop PC suitable for professional and creative tasks.
+                                </td>
+                                <td class="p-3 text-sm text-blue-400 whitespace-nowrap">Apple</td>
+                                <td class="p-3 text-sm text-rose-500 whitespace-nowrap">$2,299</td>
+                                <td class="p-3 text-sm text-teal-500 whitespace-nowrap">95</td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-red-600 cursor-pointer delete-btn">delete</span>
+                                </td>
+                            </tr>
+                            <tr class="p-3">
+                                <td class="p-3 text-sm text-orange-400 whitespace-nowrap flex justify-start items-center gap-2">
+                                    <img class="w-12 h-12 rounded-full border-2 border-gray-600" src="images/apple 27.jpg" alt="">
+                                    <span>Apple iMac 27"</span>
+                                </td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                </td>
+                                <td class="p-3 text-sm text-violet-300 truncate" title="High-performance all-in-one desktop PC suitable for professional and creative tasks.">
+                                    High-performance all-in-one desktop PC suitable for professional and creative tasks.
+                                </td>
+                                <td class="p-3 text-sm text-blue-400 whitespace-nowrap">Apple</td>
+                                <td class="p-3 text-sm text-rose-500 whitespace-nowrap">$2,299</td>
+                                <td class="p-3 text-sm text-teal-500 whitespace-nowrap">95</td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-red-600 cursor-pointer delete-btn">delete</span>
+                                </td>
+                            </tr>
+                            <tr class="p-3">
+                                <td class="p-3 text-sm text-orange-400 whitespace-nowrap flex justify-start items-center gap-2">
+                                    <img class="w-12 h-12 rounded-full border-2 border-gray-600" src="images/apple 27.jpg" alt="">
+                                    <span>Apple iMac 27"</span>
+                                </td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                </td>
+                                <td class="p-3 text-sm text-violet-300 truncate" title="High-performance all-in-one desktop PC suitable for professional and creative tasks.">
+                                    High-performance all-in-one desktop PC suitable for professional and creative tasks.
+                                </td>
+                                <td class="p-3 text-sm text-blue-400 whitespace-nowrap">Apple</td>
+                                <td class="p-3 text-sm text-rose-500 whitespace-nowrap">$2,299</td>
+                                <td class="p-3 text-sm text-teal-500 whitespace-nowrap">95</td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-red-600 cursor-pointer delete-btn">delete</span>
+                                </td>
+                            </tr>
+                            <tr class="p-3">
+                                <td class="p-3 text-sm text-orange-400 whitespace-nowrap flex justify-start items-center gap-2">
+                                    <img class="w-12 h-12 rounded-full border-2 border-gray-600" src="images/apple 27.jpg" alt="">
+                                    <span>Apple iMac 27"</span>
+                                </td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                </td>
+                                <td class="p-3 text-sm text-violet-300 truncate" title="High-performance all-in-one desktop PC suitable for professional and creative tasks.">
+                                    High-performance all-in-one desktop PC suitable for professional and creative tasks.
+                                </td>
+                                <td class="p-3 text-sm text-blue-400 whitespace-nowrap">Apple</td>
+                                <td class="p-3 text-sm text-rose-500 whitespace-nowrap">$2,299</td>
+                                <td class="p-3 text-sm text-teal-500 whitespace-nowrap">95</td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-red-600 cursor-pointer delete-btn">delete</span>
+                                </td>
+                            </tr>
+                            <tr class="p-3">
+                                <td class="p-3 text-sm text-orange-400 whitespace-nowrap flex justify-start items-center gap-2">
+                                    <img class="w-12 h-12 rounded-full border-2 border-gray-600" src="images/apple 27.jpg" alt="">
+                                    <span>Apple iMac 27"</span>
+                                </td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                </td>
+                                <td class="p-3 text-sm text-violet-300 truncate" title="High-performance all-in-one desktop PC suitable for professional and creative tasks.">
+                                    High-performance all-in-one desktop PC suitable for professional and creative tasks.
+                                </td>
+                                <td class="p-3 text-sm text-blue-400 whitespace-nowrap">Apple</td>
+                                <td class="p-3 text-sm text-rose-500 whitespace-nowrap">$2,299</td>
+                                <td class="p-3 text-sm text-teal-500 whitespace-nowrap">95</td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-red-600 cursor-pointer delete-btn">delete</span>
+                                </td>
+                            </tr>
+                            <tr class="p-3">
+                                <td class="p-3 text-sm text-orange-400 whitespace-nowrap flex justify-start items-center gap-2">
+                                    <img class="w-12 h-12 rounded-full border-2 border-gray-600" src="images/apple 27.jpg" alt="">
+                                    <span>Apple iMac 27"</span>
+                                </td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                </td>
+                                <td class="p-3 text-sm text-violet-300 truncate" title="High-performance all-in-one desktop PC suitable for professional and creative tasks.">
+                                    High-performance all-in-one desktop PC suitable for professional and creative tasks.
+                                </td>
+                                <td class="p-3 text-sm text-blue-400 whitespace-nowrap">Apple</td>
+                                <td class="p-3 text-sm text-rose-500 whitespace-nowrap">$2,299</td>
+                                <td class="p-3 text-sm text-teal-500 whitespace-nowrap">95</td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-red-600 cursor-pointer delete-btn">delete</span>
+                                </td>
+                            </tr>
+                            <tr class="p-3">
+                                <td class="p-3 text-sm text-orange-400 whitespace-nowrap flex justify-start items-center gap-2">
+                                    <img class="w-12 h-12 rounded-full border-2 border-gray-600" src="images/apple 27.jpg" alt="">
+                                    <span>Apple iMac 27"</span>
+                                </td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="p-1.5 text-xs font-medium uppercase tracking-wider text-green-600 bg-green-100 rounded-lg">Desktop Pc</span>
+                                </td>
+                                <td class="p-3 text-sm text-violet-300 truncate" title="High-performance all-in-one desktop PC suitable for professional and creative tasks.">
+                                    High-performance all-in-one desktop PC suitable for professional and creative tasks.
+                                </td>
+                                <td class="p-3 text-sm text-blue-400 whitespace-nowrap">Apple</td>
+                                <td class="p-3 text-sm text-rose-500 whitespace-nowrap">$2,299</td>
+                                <td class="p-3 text-sm text-teal-500 whitespace-nowrap">95</td>
+                                <td class="p-3 text-sm text-gray-300 whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-red-600 cursor-pointer delete-btn">delete</span>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+
+    <footer class="bg-[#262626] text-gray-500 p-4 mt-4 rounded-xl">
+    <p class="text-center font-semibold">&copy; 2025 Dashboard. All rights reserved.</p>
+    </footer>
+
+    <script src="js/sh-admin-delete.js"></script>
+    
+
+</body>
+</html>
