@@ -134,3 +134,8 @@ productImages.forEach(img => {
     window.location.href = 'product-details.html';
   });
 });
+
+//=============================================
+document.getElementById("checkout-btn").addEventListener("click", function() {
+    window.location.href = "payment.html";
+  });
