@@ -124,7 +124,12 @@ document.getElementById("cart-icon").addEventListener("click", openCart);
 document.getElementById("close-cart").addEventListener("click", closeCart);
 overlayer.addEventListener("click", closeCart);
 //=============================================================
+
 document.getElementById("checkout-btn").addEventListener("click", function() {
+    window.location.href = "payment.html";
+  });
+//=======================================================
+ document.getElementById("buy-now-btn").addEventListener("click", function() {
     window.location.href = "payment.html";
   });
 
