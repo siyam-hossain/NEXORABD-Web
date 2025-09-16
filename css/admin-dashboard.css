@@ -161,3 +161,23 @@
                 padding: 0 10px;
             }
         }
+
+
+
+/* common */
+@keyframes loaderFadeOut {
+      0%   { opacity: 1; visibility: visible; }
+      99%  { opacity: 0; visibility: visible; }
+      100% { opacity: 0; visibility: hidden; pointer-events: none; }
+    }
+    /* Default loader styling (kept inline as well for robustness) */
+    #loader {
+      /* keep on top */
+      z-index: 99999;
+      /* start animation after 3s, run 0.7s, and keep final state (forwards) */
+      animation-name: loaderFadeOut;
+      animation-duration: 0.7s;
+      animation-delay: 3s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease;
+    }
