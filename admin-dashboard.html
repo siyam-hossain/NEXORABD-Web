@@ -26,6 +26,17 @@
     </style>
 </head>
 <body class="container mx-auto  bg-[#181818] gap-4">
+    <!-- animation -->
+    <div id="loader" class="fixed inset-0 flex items-center justify-center bg-[#181818]">
+        <div class="flex flex-col items-center gap-3">
+            <svg class="animate-spin h-14 w-14 text-orange-500" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" class="opacity-25"></circle>
+                <path fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" class="opacity-75"></path>
+            </svg>
+            <p class="text-green-400 font-semibold select-none animate-pulse">Loading Dashboard...</p>
+        </div>
+    </div>
+
     <nav class="flex justify-between items-center bg-[#262626] rounded-b-xl">
         <div class="flex items-center gap-4"> 
             <button onclick="toggleSidebar()" class="material-symbols-outlined text-white text-3xl">menu</button>
@@ -668,5 +679,6 @@
 
     <script src="js/sh-admin-dashboard.js"></script>
     <script src="js/sh-map.js"></script>
+    <script src="js/sh-common.js"></script>
 </body>
 </html>
