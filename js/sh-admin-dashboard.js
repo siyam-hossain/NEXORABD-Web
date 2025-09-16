@@ -113,6 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
         dates.push(date.toLocaleDateString('en-GB', { day: '2-digit', month: 'short' }));
     }
 
+    // Random revenue values between 6,300 and 6,600 (example)
     const data = Array.from({ length: 60 }, () => Math.floor(Math.random() * 300) + 6300);
 
     const options = {
@@ -128,36 +129,37 @@ document.addEventListener("DOMContentLoaded", function () {
         tooltip: {
             enabled: true,
             x: { show: false },
+            theme: "dark",
             style: {
                 fontSize: '12px',
                 fontFamily: 'Inter, sans-serif',
-                color: '#111827',
             },
-            background: {
-                color: '#ffffff',
-                opacity: 0.9,
-            },
+            y: {
+                formatter: function (val) {
+                    return "$" + val.toLocaleString(); // format as revenue
+                }
+            }
         },
         fill: {
             type: "gradient",
             gradient: {
                 opacityFrom: 0.55,
                 opacityTo: 0,
-                shade: "#1C64F2",
-                gradientToColors: ["#1C64F2"],
+                shade: "#F97316", // orange-500 shade
+                gradientToColors: ["#F97316"],
             },
         },
         dataLabels: { enabled: false },
         stroke: {
             width: 6,
-            colors: ['#1C64F2'],
+            colors: ['#EA580C'], // orange line (#EA580C = orange-600)
         },
         grid: { show: false }, // turn off grid
         series: [
             {
-                name: "New users",
+                name: "Revenue",
                 data: data,
-                color: "#1A56DB",
+                color: "#F97316", // orange-500
             },
         ],
         xaxis: {
@@ -177,6 +179,9 @@ document.addEventListener("DOMContentLoaded", function () {
         yaxis: {
             show: true,
             labels: {
+                formatter: function (val) {
+                    return "$" + val.toLocaleString(); // show as currency
+                },
                 style: {
                     colors: "#9CA3AF", // gray-300
                     fontSize: "12px",
@@ -190,6 +195,8 @@ document.addEventListener("DOMContentLoaded", function () {
         chart.render();
     }
 });
+
+
 
 
 
